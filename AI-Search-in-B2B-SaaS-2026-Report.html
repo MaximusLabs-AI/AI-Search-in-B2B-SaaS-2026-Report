@@ -1,0 +1,2111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Search in B2B SaaS 2026 | The Vertical Benchmark on Citations, Share of Voice &amp; the New Software Buying Journey &middot; MaximusLabs</title>
+<meta name="description" content="MaximusLabs original research: how B2B SaaS brands rank on ChatGPT, Perplexity, Claude, and Google AI Overviews, why 90% are invisible in AI answers, and the GEO system that closes the gap.">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   MaximusLabs - AI Search in B2B SaaS 2026 (Vertical Benchmark)
+   Brand system: navy/blue + Satoshi. No gold. No em/en dashes.
+   ============================================================ */
+:root{
+  --navy:#001c64; --navy-2:#001435; --ink:#1e3251;
+  --blue:#003087; --accent:#0070e0; --sky:#449afb; --sky-50:#449afb80;
+  --bg:#f3f3f6; --paper:#ffffff;
+  --text:#333333; --text-2:#555555; --muted:#666666;
+  --line:#e2e2e2; --line-2:#eef0f4; --subtle:#3d4d740f;
+  --success:#34d399; --error:#c0392b; --warning:#fbbf24;
+  --grad-header:linear-gradient(192deg,#001435 28%,#003087);
+  --grad-cover:linear-gradient(160deg,#001129 0%,#001c64 55%,#003087 100%);
+  --grad-btn:linear-gradient(135deg,#001c64,#003087);
+  --grad-strong:linear-gradient(90deg,#001c64,#003087);
+  --grad-medium:linear-gradient(90deg,#003087,#0070e0);
+  --grad-light:linear-gradient(90deg,#0070e0,#449afb);
+  --grad-neg:linear-gradient(90deg,#c0392b,#e74c3c);
+  --shadow-page:0 8px 40px rgba(0,28,100,0.10);
+  --shadow-card:0 1px 4px rgba(0,0,0,0.05);
+  --shadow-pop:0 4px 24px rgba(0,28,100,0.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{
+  font-family:'Satoshi',-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:var(--bg); color:var(--text);
+  font-size:15px; line-height:1.6; font-weight:400;
+  padding:96px 24px 80px;
+}
+.tnum{font-variant-numeric:tabular-nums}
+
+/* ---------- Toolbar (screen only) ---------- */
+.toolbar{
+  position:fixed; top:0; left:0; right:0; z-index:50;
+  background:rgba(0,20,53,0.92); backdrop-filter:blur(8px);
+  display:flex; align-items:center; justify-content:center;
+  padding:14px 28px; border-bottom:1px solid rgba(68,154,251,0.25);
+}
+.toolbar .tb-logo{position:absolute; left:28px; top:50%; transform:translateY(-50%); height:22px; width:auto}
+.toolbar .tb-meta{color:#9fc3f5; font-size:12.5px; letter-spacing:.04em; font-weight:500}
+.toolbar .tb-meta b{color:#fff; font-weight:700}
+/* ---------- Page shell ---------- */
+.page{
+  width:100%; max-width:1680px; margin:0 auto 30px;
+  background:var(--paper); box-shadow:var(--shadow-page);
+  position:relative; overflow:hidden;
+}
+.pad{padding:62px 74px 70px}
+.page.dark{background:var(--navy-2); color:#eaf1fc}
+
+/* ---------- Running head / foot ---------- */
+.runhead{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:18px 74px; border-bottom:1px solid var(--line);
+  font-size:11px; letter-spacing:.14em; text-transform:uppercase; font-weight:600; color:var(--muted);
+}
+.runhead .rh-mark{height:17px;width:auto;opacity:.9}
+.runhead .rh-right{color:var(--blue)}
+.page-foot{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:16px 74px; border-top:1px solid var(--line);
+  font-size:11px; color:var(--muted); letter-spacing:.03em;
+}
+.page-foot .pf-mark{height:15px;width:auto;opacity:.55}
+.page-foot b{color:var(--blue);font-weight:700}
+
+/* ---------- Eyebrow / headings ---------- */
+.eyebrow{
+  display:inline-flex; align-items:center; gap:11px;
+  font-size:11.5px; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--blue); margin-bottom:18px;
+}
+.eyebrow::before{content:"";width:30px;height:2px;background:var(--accent);display:inline-block;border-radius:2px}
+.eyebrow.on-dark{color:var(--sky)}
+.eyebrow.on-dark::before{background:var(--sky)}
+h1,h2,h3,h4{color:var(--navy); font-weight:700; line-height:1.18; letter-spacing:-0.01em}
+.h-sec{font-size:30px; font-weight:900; margin-bottom:14px; letter-spacing:-0.02em}
+.h-blk{font-size:21px; font-weight:700; margin:34px 0 12px}
+.h-sub{font-size:16px; font-weight:700; margin:24px 0 8px; color:var(--blue)}
+.dek{font-size:16.5px; line-height:1.58; color:var(--text-2); font-weight:500; max-width:62ch}
+p{margin-bottom:14px; color:var(--text)}
+p.lead{font-size:16px; color:var(--text-2)}
+strong,b{font-weight:700; color:var(--ink)}
+a{color:var(--blue); text-decoration:none}
+.muted{color:var(--muted)}
+.hr{height:1px;background:var(--line);border:none;margin:34px 0}
+.hr-accent{height:3px;width:54px;background:var(--grad-light);border:none;border-radius:3px;margin:0 0 26px}
+
+/* ---------- Cover ---------- */
+.cover{
+  background:var(--grad-cover); color:#fff; min-height:1180px;
+  padding:64px 74px 60px; display:flex; flex-direction:column;
+  position:relative; overflow:hidden;
+}
+.cover .motif{
+  position:absolute; right:-130px; top:-90px; width:520px; height:520px;
+  opacity:.07; transform:rotate(12deg); pointer-events:none;
+}
+.cover .motif-2{
+  position:absolute; left:-150px; bottom:-150px; width:430px; height:430px;
+  opacity:.05; transform:rotate(-18deg); pointer-events:none;
+}
+.cover-top{display:flex; align-items:flex-start; justify-content:space-between; position:relative; z-index:2}
+.cover-top .cv-logo{height:30px;width:auto}
+.cv-tag{
+  font-size:11px; letter-spacing:.2em; text-transform:uppercase; font-weight:600;
+  color:#9fc3f5; border:1px solid rgba(159,195,245,0.4); border-radius:6px; padding:7px 13px;
+}
+.cover-mid{margin-top:auto; position:relative; z-index:2}
+.cv-eyebrow{
+  font-size:13px; letter-spacing:.22em; text-transform:uppercase; font-weight:700;
+  color:var(--sky); margin-bottom:26px; display:flex; align-items:center; gap:13px;
+}
+.cv-eyebrow::before{content:"";width:42px;height:2px;background:var(--sky)}
+.cv-title{
+  font-size:68px; line-height:0.99; font-weight:900; letter-spacing:-0.03em; color:#fff;
+  margin-bottom:24px;
+}
+.cv-title .accent{color:var(--sky)}
+.cv-sub{font-size:18.5px; line-height:1.5; color:#c8dbf5; font-weight:500; max-width:60ch; margin-bottom:46px}
+.cv-chips{display:grid; grid-template-columns:repeat(4,1fr); gap:0; border-top:1px solid rgba(159,195,245,0.28); border-bottom:1px solid rgba(159,195,245,0.28)}
+.cv-chip{padding:26px 24px 26px 0; border-right:1px solid rgba(159,195,245,0.18)}
+.cv-chip:last-child{border-right:none;padding-right:0}
+.cv-chip .n{font-size:42px; font-weight:900; color:#fff; letter-spacing:-0.03em; line-height:1}
+.cv-chip .n .u{font-size:24px; font-weight:700; color:var(--sky)}
+.cv-chip .l{font-size:12.5px; color:#9fc3f5; line-height:1.4; margin-top:9px; font-weight:500}
+.cover-foot{
+  display:flex; justify-content:space-between; align-items:flex-end;
+  margin-top:42px; position:relative; z-index:2;
+  font-size:12.5px; color:#9fc3f5; line-height:1.7;
+}
+.cover-foot .cf-r{text-align:right}
+.cover-foot b{color:#fff;font-weight:700}
+
+/* ---------- Section divider ---------- */
+.divider{
+  background:var(--grad-cover); color:#fff; min-height:560px;
+  padding:70px 74px; display:flex; flex-direction:column; justify-content:center;
+  position:relative; overflow:hidden;
+}
+.divider .motif{position:absolute; right:-110px; bottom:-130px; width:420px; height:420px; opacity:.07; transform:rotate(-14deg)}
+.divider .dv-num{font-size:120px; font-weight:900; color:rgba(68,154,251,0.20); line-height:0.8; letter-spacing:-0.04em; margin-bottom:6px}
+.divider .dv-eyebrow{font-size:12.5px; letter-spacing:.22em; text-transform:uppercase; font-weight:700; color:var(--sky); margin-bottom:18px; display:flex; align-items:center; gap:12px}
+.divider .dv-eyebrow::before{content:"";width:36px;height:2px;background:var(--sky)}
+.divider .dv-title{font-size:42px; font-weight:900; letter-spacing:-0.025em; line-height:1.05; color:#fff; max-width:22ch; margin-bottom:22px}
+.divider .dv-dek{font-size:17px; color:#c8dbf5; font-weight:500; line-height:1.55; max-width:58ch}
+.divider .dv-hyp{
+  margin-top:30px; padding:20px 24px; border-left:3px solid var(--sky);
+  background:rgba(68,154,251,0.08); border-radius:0 8px 8px 0; max-width:64ch;
+}
+.divider .dv-hyp .lab{font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--sky); font-weight:700; margin-bottom:7px}
+.divider .dv-hyp p{color:#dceaff; font-size:15px; margin:0; font-weight:500}
+
+/* ---------- Stat cards ---------- */
+.stat-grid{display:grid; gap:18px; margin:28px 0}
+.stat-grid.c3{grid-template-columns:repeat(3,1fr)}
+.stat-grid.c4{grid-template-columns:repeat(4,1fr)}
+.stat-grid.c2{grid-template-columns:repeat(2,1fr)}
+.stat-card{
+  border:1px solid var(--line); border-radius:10px; padding:24px 22px; background:var(--paper);
+  position:relative; overflow:hidden; box-shadow:var(--shadow-card);
+}
+.stat-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--grad-strong)}
+.stat-card.accent::before{background:var(--grad-light)}
+.stat-card.warn::before{background:var(--grad-neg)}
+.stat-card .sc-n{font-size:40px; font-weight:900; color:var(--navy); letter-spacing:-0.03em; line-height:1}
+.stat-card .sc-n .u{font-size:22px; font-weight:700; color:var(--accent)}
+.stat-card .sc-l{font-size:13px; color:var(--text-2); margin-top:10px; line-height:1.42; font-weight:500}
+.stat-card .sc-src{font-size:10.5px; color:var(--muted); margin-top:12px; letter-spacing:.02em}
+
+/* ---------- Dark findings grid ---------- */
+.findings{background:var(--grad-header); border-radius:14px; padding:40px 42px; margin:30px 0; color:#fff; position:relative; overflow:hidden}
+.findings .motif{position:absolute; right:-80px; top:-80px; width:300px; height:300px; opacity:.06}
+.findings h3{color:#fff; font-size:13px; letter-spacing:.18em; text-transform:uppercase; margin-bottom:26px; position:relative; z-index:2}
+.findings h3::after{content:"";display:block;width:40px;height:2px;background:var(--sky);margin-top:12px}
+.find-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:30px 26px; position:relative; z-index:2}
+.find-item .fi-n{font-size:38px; font-weight:900; color:var(--sky); letter-spacing:-0.03em; line-height:1}
+.find-item .fi-n .u{font-size:20px}
+.find-item .fi-t{font-size:12.5px; color:#c8dbf5; margin-top:9px; line-height:1.45; font-weight:500}
+.find-item .fi-s{font-size:10px; color:#7fa8de; margin-top:8px; letter-spacing:.03em; text-transform:uppercase; font-weight:600}
+
+/* ---------- Exhibit (chart container) ---------- */
+.exhibit{border:1px solid var(--line); border-radius:12px; padding:28px 30px 22px; margin:26px 0; background:var(--paper); box-shadow:var(--shadow-card)}
+.exhibit.flush{background:#fbfcfe}
+.ex-head{margin-bottom:22px}
+.ex-kicker{font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; font-weight:700; color:var(--accent); margin-bottom:9px; display:flex; align-items:center; gap:9px}
+.ex-kicker::before{content:"";width:20px;height:2px;background:var(--accent)}
+.ex-title{font-size:18px; font-weight:700; color:var(--navy); line-height:1.28; letter-spacing:-0.01em}
+.ex-sub{font-size:13px; color:var(--text-2); margin-top:6px; font-weight:500}
+.ex-source{font-size:10.5px; color:var(--muted); margin-top:18px; padding-top:13px; border-top:1px solid var(--line-2); letter-spacing:.01em}
+.ex-source b{color:var(--text-2); font-weight:700}
+
+/* ---------- Horizontal bar chart ---------- */
+.barh{display:flex; flex-direction:column; gap:15px}
+.barh-row{display:grid; grid-template-columns:128px 1fr; align-items:center; gap:16px}
+.barh-lab{font-size:13px; font-weight:600; color:var(--ink); text-align:right; line-height:1.25}
+.barh-lab .sub{display:block; font-size:10.5px; color:var(--muted); font-weight:500; margin-top:2px}
+.barh-track{position:relative; height:34px; background:#f0f2f7; border-radius:6px; overflow:hidden}
+.barh-fill{position:absolute; left:0; top:0; bottom:0; border-radius:6px; display:flex; align-items:center; justify-content:flex-end; padding-right:12px}
+.barh-fill .v{color:#fff; font-size:13px; font-weight:700; letter-spacing:.01em}
+.barh-fill.s-strong{background:var(--grad-strong)}
+.barh-fill.s-medium{background:var(--grad-medium)}
+.barh-fill.s-light{background:var(--grad-light)}
+.barh-fill.s-neg{background:var(--grad-neg)}
+.barh-fill.s-mute{background:#c2ccdd}
+.barh-fill.s-mute .v{color:var(--ink)}
+.barh-fill .v.outside{position:absolute; right:-1px; transform:translateX(100%); color:var(--navy); padding-left:10px}
+.delta{font-size:11px; font-weight:700; padding:2px 7px; border-radius:5px; margin-left:8px; display:inline-block}
+.delta.up{background:rgba(52,211,153,0.16); color:#0f8b5f}
+.delta.dn{background:rgba(192,57,43,0.12); color:var(--error)}
+.barh.val3 .barh-row{grid-template-columns:152px 1fr 104px}
+.barh-val{font-size:13.5px; font-weight:800; color:var(--navy); font-variant-numeric:tabular-nums; display:flex; align-items:center; gap:8px; justify-content:flex-end}
+.beforeafter{display:flex; align-items:center; gap:18px; margin:8px 0}
+.ba-box{text-align:center; flex:1; padding:18px; border-radius:10px; border:1px solid var(--line)}
+.ba-box .ba-n{font-size:34px; font-weight:900; letter-spacing:-0.02em; line-height:1}
+.ba-box .ba-l{font-size:11.5px; color:var(--muted); margin-top:8px; font-weight:600}
+.ba-from .ba-n{color:var(--muted)}
+.ba-to .ba-n{color:var(--navy)}
+.ba-arrow{font-size:26px; color:var(--sky); font-weight:900}
+
+/* ---------- Vertical bar chart ---------- */
+.barv{display:flex; align-items:flex-end; gap:18px; height:240px; padding:0 6px; border-bottom:2px solid var(--line); margin-bottom:14px}
+.barv-col{flex:1; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; height:100%}
+.barv-bar{width:100%; max-width:74px; border-radius:7px 7px 0 0; position:relative; display:flex; align-items:flex-start; justify-content:center}
+.barv-bar .v{position:absolute; top:-26px; font-size:15px; font-weight:800; color:var(--navy)}
+.barv-cap{display:flex; gap:18px; padding:0 6px}
+.barv-capcol{flex:1; text-align:center; font-size:12px; font-weight:600; color:var(--ink); max-width:120px; margin:0 auto}
+.barv-capcol .sub{display:block;font-size:10.5px;color:var(--muted);font-weight:500;margin-top:3px}
+
+/* ---------- Donut ---------- */
+.donut-wrap{display:flex; align-items:center; gap:30px; flex-wrap:wrap}
+.donut{flex-shrink:0}
+.donut-legend{display:flex; flex-direction:column; gap:11px; flex:1; min-width:200px}
+.dl-item{display:flex; align-items:center; gap:11px; font-size:13px}
+.dl-dot{width:13px; height:13px; border-radius:3px; flex-shrink:0}
+.dl-item .dl-lab{color:var(--ink); font-weight:600; flex:1}
+.dl-item .dl-val{color:var(--navy); font-weight:800; font-variant-numeric:tabular-nums}
+.donut .dc-n{font-size:30px; font-weight:900; fill:var(--navy)}
+.donut .dc-l{font-size:8.5px; font-weight:700; fill:var(--muted); letter-spacing:.08em; text-transform:uppercase}
+.donut .seg{transition:stroke-dashoffset .8s cubic-bezier(0.22,1,0.36,1)}
+.donut-trio{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+.donut-card{border:1px solid var(--line); border-radius:10px; padding:20px 16px 18px; text-align:center; background:#fbfcfe}
+.donut-card .dc-plat{font-size:13px; font-weight:800; color:var(--navy); margin-bottom:3px}
+.donut-card .dc-meta{font-size:11px; color:var(--muted); font-weight:600; margin-bottom:12px}
+.donut-card .dc-cap{font-size:11.5px; color:var(--text-2); margin-top:10px; line-height:1.4; font-weight:500}
+.donut-card .dc-cap b{color:var(--ink)}
+
+/* ---------- Tables ---------- */
+.tbl{width:100%; border-collapse:collapse; margin:22px 0; font-size:13px}
+.tbl th{
+  background:var(--navy); color:#fff; text-align:left; padding:13px 15px;
+  font-size:11px; letter-spacing:.07em; text-transform:uppercase; font-weight:700; vertical-align:bottom;
+}
+.tbl th.num,.tbl td.num{text-align:right; font-variant-numeric:tabular-nums}
+.tbl th:first-child{border-radius:8px 0 0 0}
+.tbl th:last-child{border-radius:0 8px 0 0}
+.tbl td{padding:12px 15px; border-bottom:1px solid var(--line); color:var(--text); vertical-align:top; line-height:1.45}
+.tbl tr:nth-child(even) td{background:#fafbfd}
+.tbl tr:last-child td{border-bottom:none}
+.tbl td strong{color:var(--navy)}
+.tbl .hl{color:var(--navy); font-weight:800}
+.tbl .pill{display:inline-block; font-size:10.5px; font-weight:700; padding:3px 9px; border-radius:20px; letter-spacing:.02em}
+.pill.crit{background:rgba(192,57,43,0.10); color:var(--error)}
+.pill.high{background:rgba(0,112,224,0.10); color:var(--accent)}
+.pill.found{background:rgba(0,28,100,0.08); color:var(--navy)}
+.pill.ok{background:rgba(52,211,153,0.16); color:#0f8b5f}
+
+/* ---------- MaximusLabs Perspective callout ---------- */
+.perspective{
+  border:1px solid rgba(0,112,224,0.22); border-left:4px solid var(--accent);
+  background:linear-gradient(180deg,#f6f9ff,#fbfcff);
+  border-radius:0 12px 12px 0; padding:26px 30px; margin:30px 0; position:relative;
+}
+.persp-head{display:flex; align-items:center; gap:11px; margin-bottom:14px}
+.persp-head .pmark{width:24px; height:24px}
+.persp-head .pt{font-size:12px; letter-spacing:.13em; text-transform:uppercase; font-weight:700; color:var(--blue)}
+.persp-head .pby{font-size:11px; color:var(--muted); margin-left:auto; font-weight:600; letter-spacing:.02em}
+.perspective p{font-size:15.5px; line-height:1.62; color:var(--ink); font-weight:500; margin-bottom:10px}
+.perspective p:last-child{margin-bottom:0}
+.perspective .lq{font-size:17px; font-weight:700; color:var(--navy); line-height:1.45; margin-bottom:12px; letter-spacing:-0.01em}
+
+/* ---------- "What this means" inline note ---------- */
+.note{border-left:3px solid var(--sky); background:var(--subtle); padding:16px 22px; border-radius:0 8px 8px 0; margin:22px 0}
+.note .nl{font-size:11px; letter-spacing:.13em; text-transform:uppercase; font-weight:700; color:var(--blue); margin-bottom:6px}
+.note p{margin:0; font-size:14.5px; color:var(--ink); font-weight:500; line-height:1.55}
+
+/* ---------- Pull quote ---------- */
+.pullquote{margin:36px 0; padding:8px 0 8px 30px; border-left:4px solid var(--accent)}
+.pullquote .pq-t{font-size:25px; font-weight:900; color:var(--navy); line-height:1.28; letter-spacing:-0.02em}
+.pullquote .pq-a{font-size:13px; color:var(--muted); margin-top:14px; font-weight:600; letter-spacing:.02em}
+
+/* ---------- Two column ---------- */
+.cols{display:grid; grid-template-columns:1fr 1fr; gap:34px}
+.cols.w-wide{grid-template-columns:1.3fr 1fr}
+.cols.w-narrow{grid-template-columns:1fr 1.3fr}
+
+/* ---------- TOC ---------- */
+.toc-list{display:flex; flex-direction:column; gap:0; margin-top:8px}
+.toc-row{display:grid; grid-template-columns:50px 1fr auto; align-items:baseline; gap:18px; padding:16px 0; border-bottom:1px solid var(--line)}
+.toc-row:last-child{border-bottom:none}
+.toc-num{font-size:15px; font-weight:900; color:var(--sky); font-variant-numeric:tabular-nums}
+.toc-t{font-size:16.5px; font-weight:700; color:var(--navy)}
+.toc-d{font-size:13px; color:var(--muted); margin-top:3px; font-weight:500}
+.toc-pg{font-size:13px; color:var(--blue); font-weight:700; font-variant-numeric:tabular-nums}
+
+/* ---------- Numbered list cards ---------- */
+.numlist{display:flex; flex-direction:column; gap:14px; margin:22px 0; counter-reset:nl}
+.numitem{display:grid; grid-template-columns:42px 1fr; gap:18px; align-items:start; padding:18px 20px; border:1px solid var(--line); border-radius:10px; background:var(--paper); box-shadow:var(--shadow-card)}
+.numitem .ni-n{width:38px; height:38px; border-radius:9px; background:var(--grad-btn); color:#fff; font-weight:900; font-size:16px; display:flex; align-items:center; justify-content:center}
+.numitem .ni-t{font-size:15px; font-weight:700; color:var(--navy); margin-bottom:4px}
+.numitem .ni-b{font-size:13.5px; color:var(--text-2); line-height:1.5}
+.numitem .ni-b strong{color:var(--ink)}
+
+/* ---------- Signal grid ---------- */
+.sig-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin:24px 0}
+.sig{display:grid; grid-template-columns:46px 1fr; gap:15px; padding:18px 20px; border:1px solid var(--line); border-radius:10px; background:var(--paper); box-shadow:var(--shadow-card); position:relative}
+.sig .sg-n{width:42px;height:42px;border-radius:10px;background:var(--subtle);color:var(--blue);font-weight:900;font-size:17px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,112,224,0.18)}
+.sig .sg-t{font-size:14.5px; font-weight:700; color:var(--navy); margin-bottom:5px}
+.sig .sg-b{font-size:12.5px; color:var(--text-2); line-height:1.48}
+.sig .sg-stat{display:inline-block; margin-top:8px; font-size:11px; font-weight:700; color:var(--accent); background:rgba(0,112,224,0.08); padding:3px 9px; border-radius:5px}
+
+/* ---------- Pyramid ---------- */
+.pyramid{display:flex; flex-direction:column; align-items:center; gap:8px; margin:26px 0}
+.pyr-tier{color:#fff; border-radius:8px; padding:20px 26px; text-align:center; position:relative; box-shadow:var(--shadow-card)}
+.pyr-1{width:50%; background:var(--grad-strong)}
+.pyr-2{width:75%; background:var(--grad-medium)}
+.pyr-3{width:100%; background:var(--grad-light)}
+.pyr-tier .pt-tag{font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; font-weight:700; opacity:.82; margin-bottom:5px}
+.pyr-tier .pt-t{font-size:17px; font-weight:800; margin-bottom:5px}
+.pyr-tier .pt-d{font-size:12.5px; opacity:.92; line-height:1.4; font-weight:500; max-width:64ch; margin:0 auto}
+
+/* ---------- Process flow ---------- */
+.flow{display:grid; grid-template-columns:1fr 28px 1fr 28px 1fr; align-items:stretch; margin:26px 0}
+.flow-step{border:1px solid var(--line); border-top:3px solid var(--accent); border-radius:10px; padding:20px 20px; background:var(--paper); box-shadow:var(--shadow-card)}
+.flow-step .fs-n{font-size:11px; letter-spacing:.12em; text-transform:uppercase; font-weight:700; color:var(--accent); margin-bottom:9px}
+.flow-step .fs-t{font-size:15.5px; font-weight:800; color:var(--navy); margin-bottom:9px}
+.flow-step .fs-io{font-size:12px; line-height:1.5; color:var(--text-2)}
+.flow-step .fs-io b{color:var(--ink); display:block; margin-top:7px; font-size:11px; letter-spacing:.04em; text-transform:uppercase; color:var(--blue)}
+.flow-arrow{display:flex; align-items:center; justify-content:center; color:var(--sky); font-size:22px; font-weight:900}
+
+/* ---------- 2x2 matrix ---------- */
+.matrix{position:relative; margin:30px 0 10px; padding:0 0 0 38px}
+.matrix-yl{position:absolute; left:-4px; top:50%; transform:rotate(-90deg) translateX(50%); transform-origin:left center; white-space:nowrap; font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--blue)}
+.matrix-grid{position:relative; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:0; aspect-ratio:1.7/1; border-left:2px solid var(--navy); border-bottom:2px solid var(--navy)}
+.mq{position:relative; padding:18px; border:1px dashed var(--line)}
+.mq .mq-lab{font-size:11px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--muted); line-height:1.35}
+.mq-tl{background:rgba(0,112,224,0.03)}
+.mq-tr{background:rgba(52,211,153,0.07)}
+.mq-bl{background:rgba(192,57,43,0.04)}
+.mq-br{background:rgba(0,112,224,0.04)}
+.bubble{position:absolute; border-radius:50%; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; font-weight:800; box-shadow:0 4px 14px rgba(0,28,100,0.22)}
+.bubble .bb-n{font-size:inherit; line-height:1}
+.bubble .bb-l{font-size:10px; font-weight:600; opacity:.95; margin-top:2px; line-height:1.1}
+.matrix-xl{text-align:center; font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--blue); margin-top:12px; margin-left:38px}
+
+/* ---------- Legend ---------- */
+.legend{display:flex; gap:22px; flex-wrap:wrap; margin-top:8px}
+.legend .lg{display:flex; align-items:center; gap:8px; font-size:12px; font-weight:600; color:var(--ink)}
+.legend .lg .lc{width:18px; height:3px; border-radius:2px}
+.legend .lg .lc.dot{width:11px;height:11px;border-radius:50%}
+
+/* ---------- Case study header ---------- */
+.case-hd{display:flex; align-items:center; gap:16px; margin:6px 0 18px}
+.case-hd .ch-badge{font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#fff; background:var(--grad-btn); padding:7px 14px; border-radius:7px}
+.case-hd .ch-t{font-size:22px; font-weight:900; color:var(--navy); letter-spacing:-0.02em}
+.case-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:18px 0}
+.case-mini{border:1px solid var(--line); border-radius:9px; padding:16px 18px; background:#fbfcfe}
+.case-mini .cm-n{font-size:27px; font-weight:900; color:var(--navy); letter-spacing:-0.02em; line-height:1}
+.case-mini .cm-n .u{font-size:16px; color:var(--accent)}
+.case-mini .cm-l{font-size:11.5px; color:var(--text-2); margin-top:7px; font-weight:500; line-height:1.4}
+.cap-row{display:grid; grid-template-columns:90px 1fr; gap:14px; padding:11px 0; border-bottom:1px solid var(--line-2)}
+.cap-row:last-child{border-bottom:none}
+.cap-row .cr-k{font-size:11px; letter-spacing:.08em; text-transform:uppercase; font-weight:700; color:var(--blue); padding-top:2px}
+.cap-row .cr-v{font-size:13.5px; color:var(--text); line-height:1.5}
+
+/* ---------- Roadmap timeline ---------- */
+.roadmap{margin:26px 0}
+.rm-bar{display:grid; grid-template-columns:repeat(12,1fr); gap:4px; margin-bottom:8px}
+.rm-seg{height:42px; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; color:#fff; letter-spacing:.03em}
+.rm-months{display:grid; grid-template-columns:repeat(12,1fr); gap:4px; margin-bottom:20px}
+.rm-mo{text-align:center; font-size:10px; color:var(--muted); font-weight:600}
+.rm-card{display:grid; grid-template-columns:160px 1fr; gap:20px; padding:18px 0; border-top:1px solid var(--line)}
+.rm-card .rc-ph{font-size:12px; font-weight:800; color:var(--navy)}
+.rm-card .rc-ph .mo{display:block; font-size:11px; color:var(--accent); font-weight:700; margin-top:3px}
+.rm-card .rc-b{font-size:13px; color:var(--text-2); line-height:1.5}
+.rm-card .rc-b strong{color:var(--ink)}
+
+/* ---------- Recommendation columns ---------- */
+.rec-cols{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin:24px 0}
+.rec-col{border:1px solid var(--line); border-radius:12px; overflow:hidden; background:var(--paper); box-shadow:var(--shadow-card)}
+.rec-col .rc-hd{background:var(--grad-header); color:#fff; padding:16px 20px; font-size:14px; font-weight:800; letter-spacing:.01em}
+.rec-col .rc-hd span{display:block; font-size:10.5px; color:var(--sky); letter-spacing:.12em; text-transform:uppercase; font-weight:700; margin-bottom:4px}
+.rec-col ol{list-style:none; counter-reset:r; padding:14px 20px 18px}
+.rec-col li{counter-increment:r; position:relative; padding:11px 0 11px 32px; font-size:13px; line-height:1.5; color:var(--text-2); border-bottom:1px solid var(--line-2)}
+.rec-col li:last-child{border-bottom:none}
+.rec-col li::before{content:counter(r); position:absolute; left:0; top:10px; width:21px; height:21px; background:var(--subtle); color:var(--blue); border-radius:6px; font-size:11px; font-weight:800; display:flex; align-items:center; justify-content:center}
+.rec-col li strong{color:var(--navy)}
+
+/* ---------- About / closing ---------- */
+.about{background:var(--grad-cover); color:#fff; padding:60px 74px; position:relative; overflow:hidden}
+.about .motif{position:absolute; right:-100px; top:-100px; width:380px; height:380px; opacity:.07}
+.about .ab-logo{height:30px; margin-bottom:30px}
+.about h2{color:#fff; font-size:30px; font-weight:900; margin-bottom:18px; letter-spacing:-0.02em}
+.about p{color:#c8dbf5; font-size:15px; line-height:1.65; max-width:64ch; font-weight:500}
+.about .ab-cta{display:inline-flex; align-items:center; gap:10px; margin-top:26px; background:var(--grad-light); color:#fff; padding:13px 24px; border-radius:9px; font-weight:700; font-size:14px}
+.ab-meta{display:flex; gap:50px; margin-top:40px; padding-top:28px; border-top:1px solid rgba(159,195,245,0.28); position:relative; z-index:2; flex-wrap:wrap}
+.ab-meta .am-k{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--sky); font-weight:700; margin-bottom:7px}
+.ab-meta .am-v{font-size:13.5px; color:#dceaff; line-height:1.6; font-weight:500}
+
+/* ---------- Source ledger ---------- */
+.ledger{font-size:12px}
+.ledger td{padding:9px 12px}
+.ref-list{columns:2; column-gap:38px; font-size:11.5px; color:var(--text-2); margin-top:16px}
+.ref-list .ref{break-inside:avoid; padding:6px 0; line-height:1.45; display:grid; grid-template-columns:24px 1fr; gap:8px}
+.ref .rn{font-weight:800; color:var(--blue)}
+.ref a{color:var(--blue); word-break:break-word}
+
+/* ---------- Utility ---------- */
+.mt0{margin-top:0}.mb0{margin-bottom:0}.tc{text-align:center}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.badge-row{display:flex; gap:10px; flex-wrap:wrap; margin:16px 0}
+.badge{font-size:11.5px; font-weight:700; padding:6px 13px; border-radius:7px; background:var(--subtle); color:var(--blue); border:1px solid rgba(0,112,224,0.14)}
+
+/* ---------- Print ---------- */
+@media print{
+  body{background:#fff; padding:0}
+  .toolbar{display:none}
+  .page{box-shadow:none; margin:0 auto; width:100%; max-width:100%; page-break-after:always; break-after:page}
+  .page:last-child{page-break-after:auto}
+  .exhibit,.stat-card,.numitem,.sig,.rec-col,.perspective,.findings,.flow-step,.case-mini{box-shadow:none}
+  a{color:var(--blue)}
+  @page{size:A4 landscape; margin:0}
+}
+/* ---------- Tablet ---------- */
+@media (max-width:980px){
+  body{padding:88px 18px 60px}
+  .pad{padding:44px 40px 52px}
+  .runhead,.page-foot{padding-left:40px;padding-right:40px}
+  .h-sec{font-size:26px}
+  .cv-title{font-size:50px}
+  .divider .dv-num{font-size:96px}
+  .divider .dv-title{font-size:36px}
+  .cv-chips{grid-template-columns:repeat(2,1fr)}
+  .cv-chip{border-right:none;border-bottom:1px solid rgba(159,195,245,0.18);padding-right:0}
+  .find-grid{grid-template-columns:repeat(2,1fr)}
+  .cols,.cols.w-wide,.cols.w-narrow,.grid-2,.stat-grid.c3,.stat-grid.c4,.rec-cols,.case-grid,.sig-grid,.donut-trio{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr}
+  .flow-arrow{transform:rotate(90deg); padding:6px 0}
+}
+/* ---------- Phone ---------- */
+@media (max-width:600px){
+  body{padding:74px 12px 44px}
+  .page{margin:0 auto 18px}
+  .pad{padding:32px 20px 38px}
+  .runhead,.page-foot{padding-left:20px;padding-right:20px; font-size:10px; letter-spacing:.07em}
+  .toolbar{padding:12px 16px}
+  .toolbar .tb-meta{display:none}
+  .toolbar .tb-logo{left:16px}
+  .cover{min-height:auto; padding-top:46px; padding-bottom:46px}
+  .divider{min-height:auto; padding:42px 24px}
+  .cv-title{font-size:35px}
+  .cv-chip .n{font-size:32px}
+  .cv-chips{grid-template-columns:1fr}
+  .cover-foot{flex-direction:column; align-items:flex-start; gap:14px}
+  .cover-foot .cf-r{text-align:left}
+  .divider .dv-num{font-size:70px}
+  .divider .dv-title{font-size:27px}
+  .h-sec{font-size:22px}
+  .stat-card .sc-n{font-size:33px}
+  .stat-grid.c2{grid-template-columns:1fr}
+  .find-grid{grid-template-columns:1fr}
+  .ref-list{columns:1}
+  .matrix-grid{aspect-ratio:1/1}
+  .rm-card{grid-template-columns:1fr; gap:8px}
+  .tbl{display:block; overflow-x:auto; -webkit-overflow-scrolling:touch}
+  .barh-row,.barh.val3 .barh-row{grid-template-columns:1fr; gap:7px}
+  .barh-lab{text-align:left}
+  .barh-val{justify-content:flex-start}
+  [style*="grid-template-columns"]:not([style*="repeat(12"]){grid-template-columns:1fr !important}
+}
+</style>
+</head>
+<body>
+
+<!-- ============== SVG LOGO SYMBOLS ============== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="ml-mark" viewBox="0 0 48 48">
+    <path d="M37 23.9998H30.064C26.715 23.9998 24 26.7148 24 30.0638V47.4268C24 47.6458 24.26 47.7598 24.421 47.6108L37 35.9998V23.9998Z" fill="#449AFB"/>
+    <path d="M36.9995 24H30.0635C28.6275 24 27.3085 24.499 26.2695 25.333L36.9995 36V24Z" fill="#003087"/>
+    <path d="M11 24H17.936C21.285 24 24 21.285 24 17.936V0.574006C24 0.355006 23.74 0.241003 23.579 0.390004L11 12V24Z" fill="#449AFB"/>
+    <path d="M11 24H17.936C19.372 24 20.691 23.501 21.73 22.667L11 12V24Z" fill="#003087"/>
+    <path d="M23.9997 37V30.064C23.9997 26.715 21.2847 24 17.9357 24H0.572748C0.353748 24 0.239748 24.26 0.388748 24.421L11.9997 37H23.9997Z" fill="#449AFB"/>
+    <path d="M24 37V30.064C24 28.628 23.501 27.309 22.667 26.27L12 37H24Z" fill="#003087"/>
+    <path d="M24 11V17.936C24 21.285 26.715 24 30.064 24H47.426C47.645 24 47.759 23.74 47.61 23.579L36 11H24Z" fill="#449AFB"/>
+    <path d="M24 11V17.936C24 19.372 24.499 20.691 25.333 21.73L36 11H24Z" fill="#003087"/>
+  </symbol>
+  <symbol id="ml-mark-w" viewBox="0 0 48 48">
+    <path d="M37 23.9998H30.064C26.715 23.9998 24 26.7148 24 30.0638V47.4268C24 47.6458 24.26 47.7598 24.421 47.6108L37 35.9998V23.9998Z" fill="#ffffff"/>
+    <path d="M36.9995 24H30.0635C28.6275 24 27.3085 24.499 26.2695 25.333L36.9995 36V24Z" fill="#9fc3f5"/>
+    <path d="M11 24H17.936C21.285 24 24 21.285 24 17.936V0.574006C24 0.355006 23.74 0.241003 23.579 0.390004L11 12V24Z" fill="#ffffff"/>
+    <path d="M11 24H17.936C19.372 24 20.691 23.501 21.73 22.667L11 12V24Z" fill="#9fc3f5"/>
+    <path d="M23.9997 37V30.064C23.9997 26.715 21.2847 24 17.9357 24H0.572748C0.353748 24 0.239748 24.26 0.388748 24.421L11.9997 37H23.9997Z" fill="#ffffff"/>
+    <path d="M24 37V30.064C24 28.628 23.501 27.309 22.667 26.27L12 37H24Z" fill="#9fc3f5"/>
+    <path d="M24 11V17.936C24 21.285 26.715 24 30.064 24H47.426C47.645 24 47.759 23.74 47.61 23.579L36 11H24Z" fill="#ffffff"/>
+    <path d="M24 11V17.936C24 19.372 24.499 20.691 25.333 21.73L36 11H24Z" fill="#9fc3f5"/>
+  </symbol>
+  <symbol id="ml-word" viewBox="0 0 267 48">
+    <path d="M37 23.9998H30.064C26.715 23.9998 24 26.7148 24 30.0638V47.4268C24 47.6458 24.26 47.7598 24.421 47.6108L37 35.9998V23.9998Z" fill="#449AFB"/>
+    <path d="M36.9995 24H30.0635C28.6275 24 27.3085 24.499 26.2695 25.333L36.9995 36V24Z" fill="#003087"/>
+    <path d="M11 24H17.936C21.285 24 24 21.285 24 17.936V0.574006C24 0.355006 23.74 0.241003 23.579 0.390004L11 12V24Z" fill="#449AFB"/>
+    <path d="M11 24H17.936C19.372 24 20.691 23.501 21.73 22.667L11 12V24Z" fill="#003087"/>
+    <path d="M23.9997 37V30.064C23.9997 26.715 21.2847 24 17.9357 24H0.572748C0.353748 24 0.239748 24.26 0.388748 24.421L11.9997 37H23.9997Z" fill="#449AFB"/>
+    <path d="M24 37V30.064C24 28.628 23.501 27.309 22.667 26.27L12 37H24Z" fill="#003087"/>
+    <path d="M24 11V17.936C24 21.285 26.715 24 30.064 24H47.426C47.645 24 47.759 23.74 47.61 23.579L36 11H24Z" fill="#449AFB"/>
+    <path d="M24 11V17.936C24 19.372 24.499 20.691 25.333 21.73L36 11H24Z" fill="#003087"/>
+    <path d="M63.56 35H59.592V11.608H63.56L71.112 30.232L78.664 11.608H82.696V35H78.728V27.8C78.728 23.096 78.728 21.72 78.952 20.056L73 35H69.224L63.304 20.088C63.528 21.496 63.56 23.704 63.56 26.616V35ZM92.0013 35.416C88.6413 35.416 86.5933 33.464 86.5933 30.488C86.5933 27.576 88.7053 25.752 92.4493 25.464L97.1853 25.112V24.76C97.1853 22.616 95.9053 21.752 93.9213 21.752C91.6173 21.752 90.3373 22.712 90.3373 24.376H87.0093C87.0093 20.952 89.8253 18.712 94.1133 18.712C98.3693 18.712 100.993 21.016 100.993 25.4V35H97.5693L97.2813 32.664C96.6093 34.296 94.4653 35.416 92.0013 35.416ZM93.2812 32.472C95.6813 32.472 97.2173 31.032 97.2173 28.6V27.768L93.9213 28.024C91.4893 28.248 90.5613 29.048 90.5613 30.328C90.5613 31.768 91.5213 32.472 93.2812 32.472ZM107.581 35H103.133L108.573 27.256L103.133 19.192H107.677L111.165 24.568L114.525 19.192H118.909L113.533 27.192L118.749 35H114.269L110.909 29.784L107.581 35ZM123.187 16.024C121.843 16.024 120.787 14.968 120.787 13.656C120.787 12.344 121.843 11.32 123.187 11.32C124.467 11.32 125.523 12.344 125.523 13.656C125.523 14.968 124.467 16.024 123.187 16.024ZM121.235 35V19.192H125.139V35H121.235ZM133.076 35H129.172V19.192H132.756L133.076 21.048C133.876 19.736 135.476 18.712 137.748 18.712C140.148 18.712 141.812 19.896 142.644 21.72C143.444 19.896 145.3 18.712 147.7 18.712C151.54 18.712 153.652 21.016 153.652 24.664V35H149.78V25.688C149.78 23.416 148.564 22.232 146.708 22.232C144.82 22.232 143.38 23.448 143.38 26.04V35H139.476V25.656C139.476 23.448 138.292 22.264 136.436 22.264C134.58 22.264 133.076 23.48 133.076 26.04V35ZM168.205 19.192H172.109V35H168.493L168.205 32.888C167.245 34.392 165.197 35.416 163.085 35.416C159.437 35.416 157.293 32.952 157.293 29.08V19.192H161.197V27.704C161.197 30.712 162.381 31.928 164.557 31.928C167.021 31.928 168.205 30.488 168.205 27.48V19.192ZM174.613 30.2H178.325C178.357 31.576 179.381 32.44 181.173 32.44C182.997 32.44 183.989 31.704 183.989 30.552C183.989 29.752 183.573 29.176 182.165 28.856L179.317 28.184C176.469 27.544 175.093 26.2 175.093 23.672C175.093 20.568 177.717 18.712 181.365 18.712C184.917 18.712 187.317 20.76 187.349 23.832H183.637C183.605 22.488 182.709 21.624 181.205 21.624C179.669 21.624 178.773 22.328 178.773 23.512C178.773 24.408 179.477 24.984 180.821 25.304L183.669 25.976C186.325 26.584 187.669 27.8 187.669 30.232C187.669 33.432 184.949 35.416 181.045 35.416C177.109 35.416 174.613 33.304 174.613 30.2ZM195.313 11.608V31.224H205.105V35H191.217V11.608H195.313ZM212.564 35.416C209.204 35.416 207.156 33.464 207.156 30.488C207.156 27.576 209.268 25.752 213.012 25.464L217.748 25.112V24.76C217.748 22.616 216.468 21.752 214.484 21.752C212.18 21.752 210.9 22.712 210.9 24.376H207.572C207.572 20.952 210.388 18.712 214.676 18.712C218.932 18.712 221.556 21.016 221.556 25.4V35H218.132L217.844 32.664C217.172 34.296 215.028 35.416 212.564 35.416ZM213.844 32.472C216.244 32.472 217.78 31.032 217.78 28.6V27.768L214.484 28.024C212.052 28.248 211.124 29.048 211.124 30.328C211.124 31.768 212.084 32.472 213.844 32.472ZM229.007 35H225.391V11.192H229.295V21.496C230.319 19.736 232.431 18.68 234.831 18.68C239.343 18.68 242.095 22.2 242.095 27.192C242.095 32.056 239.119 35.416 234.575 35.416C232.207 35.416 230.191 34.36 229.263 32.536L229.007 35ZM229.327 27.032C229.327 29.88 231.087 31.832 233.775 31.832C236.527 31.832 238.159 29.848 238.159 27.032C238.159 24.216 236.527 22.2 233.775 22.2C231.087 22.2 229.327 24.184 229.327 27.032ZM243.988 30.2H247.7C247.732 31.576 248.756 32.44 250.548 32.44C252.372 32.44 253.364 31.704 253.364 30.552C253.364 29.752 252.948 29.176 251.54 28.856L248.692 28.184C245.844 27.544 244.468 26.2 244.468 23.672C244.468 20.568 247.092 18.712 250.74 18.712C254.292 18.712 256.692 20.76 256.724 23.832H253.012C252.98 22.488 252.084 21.624 250.58 21.624C249.044 21.624 248.148 22.328 248.148 23.512C248.148 24.408 248.852 24.984 250.196 25.304L253.044 25.976C255.7 26.584 257.044 27.8 257.044 30.232C257.044 33.432 254.324 35.416 250.42 35.416C246.484 35.416 243.988 33.304 243.988 30.2Z" fill="#001c64"/>
+  </symbol>
+  <symbol id="ml-word-w" viewBox="0 0 267 48">
+    <path d="M37 23.9998H30.064C26.715 23.9998 24 26.7148 24 30.0638V47.4268C24 47.6458 24.26 47.7598 24.421 47.6108L37 35.9998V23.9998Z" fill="#ffffff"/>
+    <path d="M36.9995 24H30.0635C28.6275 24 27.3085 24.499 26.2695 25.333L36.9995 36V24Z" fill="#9fc3f5"/>
+    <path d="M11 24H17.936C21.285 24 24 21.285 24 17.936V0.574006C24 0.355006 23.74 0.241003 23.579 0.390004L11 12V24Z" fill="#ffffff"/>
+    <path d="M11 24H17.936C19.372 24 20.691 23.501 21.73 22.667L11 12V24Z" fill="#9fc3f5"/>
+    <path d="M23.9997 37V30.064C23.9997 26.715 21.2847 24 17.9357 24H0.572748C0.353748 24 0.239748 24.26 0.388748 24.421L11.9997 37H23.9997Z" fill="#ffffff"/>
+    <path d="M24 37V30.064C24 28.628 23.501 27.309 22.667 26.27L12 37H24Z" fill="#9fc3f5"/>
+    <path d="M24 11V17.936C24 21.285 26.715 24 30.064 24H47.426C47.645 24 47.759 23.74 47.61 23.579L36 11H24Z" fill="#ffffff"/>
+    <path d="M24 11V17.936C24 19.372 24.499 20.691 25.333 21.73L36 11H24Z" fill="#9fc3f5"/>
+    <path d="M63.56 35H59.592V11.608H63.56L71.112 30.232L78.664 11.608H82.696V35H78.728V27.8C78.728 23.096 78.728 21.72 78.952 20.056L73 35H69.224L63.304 20.088C63.528 21.496 63.56 23.704 63.56 26.616V35ZM92.0013 35.416C88.6413 35.416 86.5933 33.464 86.5933 30.488C86.5933 27.576 88.7053 25.752 92.4493 25.464L97.1853 25.112V24.76C97.1853 22.616 95.9053 21.752 93.9213 21.752C91.6173 21.752 90.3373 22.712 90.3373 24.376H87.0093C87.0093 20.952 89.8253 18.712 94.1133 18.712C98.3693 18.712 100.993 21.016 100.993 25.4V35H97.5693L97.2813 32.664C96.6093 34.296 94.4653 35.416 92.0013 35.416ZM93.2812 32.472C95.6813 32.472 97.2173 31.032 97.2173 28.6V27.768L93.9213 28.024C91.4893 28.248 90.5613 29.048 90.5613 30.328C90.5613 31.768 91.5213 32.472 93.2812 32.472ZM107.581 35H103.133L108.573 27.256L103.133 19.192H107.677L111.165 24.568L114.525 19.192H118.909L113.533 27.192L118.749 35H114.269L110.909 29.784L107.581 35ZM123.187 16.024C121.843 16.024 120.787 14.968 120.787 13.656C120.787 12.344 121.843 11.32 123.187 11.32C124.467 11.32 125.523 12.344 125.523 13.656C125.523 14.968 124.467 16.024 123.187 16.024ZM121.235 35V19.192H125.139V35H121.235ZM133.076 35H129.172V19.192H132.756L133.076 21.048C133.876 19.736 135.476 18.712 137.748 18.712C140.148 18.712 141.812 19.896 142.644 21.72C143.444 19.896 145.3 18.712 147.7 18.712C151.54 18.712 153.652 21.016 153.652 24.664V35H149.78V25.688C149.78 23.416 148.564 22.232 146.708 22.232C144.82 22.232 143.38 23.448 143.38 26.04V35H139.476V25.656C139.476 23.448 138.292 22.264 136.436 22.264C134.58 22.264 133.076 23.48 133.076 26.04V35ZM168.205 19.192H172.109V35H168.493L168.205 32.888C167.245 34.392 165.197 35.416 163.085 35.416C159.437 35.416 157.293 32.952 157.293 29.08V19.192H161.197V27.704C161.197 30.712 162.381 31.928 164.557 31.928C167.021 31.928 168.205 30.488 168.205 27.48V19.192ZM174.613 30.2H178.325C178.357 31.576 179.381 32.44 181.173 32.44C182.997 32.44 183.989 31.704 183.989 30.552C183.989 29.752 183.573 29.176 182.165 28.856L179.317 28.184C176.469 27.544 175.093 26.2 175.093 23.672C175.093 20.568 177.717 18.712 181.365 18.712C184.917 18.712 187.317 20.76 187.349 23.832H183.637C183.605 22.488 182.709 21.624 181.205 21.624C179.669 21.624 178.773 22.328 178.773 23.512C178.773 24.408 179.477 24.984 180.821 25.304L183.669 25.976C186.325 26.584 187.669 27.8 187.669 30.232C187.669 33.432 184.949 35.416 181.045 35.416C177.109 35.416 174.613 33.304 174.613 30.2ZM195.313 11.608V31.224H205.105V35H191.217V11.608H195.313ZM212.564 35.416C209.204 35.416 207.156 33.464 207.156 30.488C207.156 27.576 209.268 25.752 213.012 25.464L217.748 25.112V24.76C217.748 22.616 216.468 21.752 214.484 21.752C212.18 21.752 210.9 22.712 210.9 24.376H207.572C207.572 20.952 210.388 18.712 214.676 18.712C218.932 18.712 221.556 21.016 221.556 25.4V35H218.132L217.844 32.664C217.172 34.296 215.028 35.416 212.564 35.416ZM213.844 32.472C216.244 32.472 217.78 31.032 217.78 28.6V27.768L214.484 28.024C212.052 28.248 211.124 29.048 211.124 30.328C211.124 31.768 212.084 32.472 213.844 32.472ZM229.007 35H225.391V11.192H229.295V21.496C230.319 19.736 232.431 18.68 234.831 18.68C239.343 18.68 242.095 22.2 242.095 27.192C242.095 32.056 239.119 35.416 234.575 35.416C232.207 35.416 230.191 34.36 229.263 32.536L229.007 35ZM229.327 27.032C229.327 29.88 231.087 31.832 233.775 31.832C236.527 31.832 238.159 29.848 238.159 27.032C238.159 24.216 236.527 22.2 233.775 22.2C231.087 22.2 229.327 24.184 229.327 27.032ZM243.988 30.2H247.7C247.732 31.576 248.756 32.44 250.548 32.44C252.372 32.44 253.364 31.704 253.364 30.552C253.364 29.752 252.948 29.176 251.54 28.856L248.692 28.184C245.844 27.544 244.468 26.2 244.468 23.672C244.468 20.568 247.092 18.712 250.74 18.712C254.292 18.712 256.692 20.76 256.724 23.832H253.012C252.98 22.488 252.084 21.624 250.58 21.624C249.044 21.624 248.148 22.328 248.148 23.512C248.148 24.408 248.852 24.984 250.196 25.304L253.044 25.976C255.7 26.584 257.044 27.8 257.044 30.232C257.044 33.432 254.324 35.416 250.42 35.416C246.484 35.416 243.988 33.304 243.988 30.2Z" fill="#ffffff"/>
+  </symbol>
+</svg>
+
+<!-- ============== TOOLBAR ============== -->
+<div class="toolbar">
+  <svg class="tb-logo" viewBox="0 0 267 48"><use href="#ml-word-w"/></svg>
+  <div class="tb-meta">AI Search in B2B SaaS &nbsp;&middot;&nbsp; <b>2026 Vertical Benchmark</b></div>
+</div>
+
+<!-- ============== COVER ============== -->
+<section class="page cover">
+  <svg class="motif" viewBox="0 0 48 48"><use href="#ml-mark-w"/></svg>
+  <svg class="motif-2" viewBox="0 0 48 48"><use href="#ml-mark-w"/></svg>
+  <div class="cover-top">
+    <svg class="cv-logo" viewBox="0 0 267 48"><use href="#ml-word-w"/></svg>
+    <div class="cv-tag">Original Research &middot; 2026</div>
+  </div>
+  <div class="cover-mid">
+    <div class="cv-eyebrow">The B2B SaaS Vertical Benchmark</div>
+    <h1 class="cv-title">AI Search in<br>B2B <span class="accent">SaaS</span> 2026</h1>
+    <p class="cv-sub">The benchmark on citations, share of voice, and the new software buying journey. How B2B SaaS brands rank on ChatGPT, Perplexity, Claude, and Google AI Overviews, and what separates the brands AI recommends from the 90% it never names.</p>
+    <div class="cv-chips">
+      <div class="cv-chip"><div class="n">51<span class="u">%</span></div><div class="l">of B2B buyers now start software research in an AI chatbot</div></div>
+      <div class="cv-chip"><div class="n">90<span class="u">%</span></div><div class="l">of brands have zero AI search mentions</div></div>
+      <div class="cv-chip"><div class="n">64<span class="u">%</span></div><div class="l">citation rate for the elite-tier benchmark client</div></div>
+      <div class="cv-chip"><div class="n">11<span class="u">x</span></div><div class="l">Perplexity referral conversion vs organic search</div></div>
+    </div>
+  </div>
+  <div class="cover-foot">
+    <div>Produced by <b>MaximusLabs Research</b><br>Answer Engine &amp; Generative Engine Optimization for B2B SaaS</div>
+    <div class="cf-r">Audience: founders, CMOs &amp; demand-gen leaders, <b>$5M to $100M ARR</b><br>Coverage: ChatGPT &middot; Perplexity &middot; Claude &middot; Google AI Overviews</div>
+  </div>
+</section>
+
+<!-- ============== CONTENTS ============== -->
+<section class="page">
+  <div class="runhead">
+    <svg class="rh-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span class="rh-right">2026 Vertical Benchmark</span>
+  </div>
+  <div class="pad">
+    <div class="eyebrow">Inside This Report</div>
+    <h2 class="h-sec">Contents</h2>
+    <div class="hr-accent"></div>
+    <p class="dek" style="margin-bottom:30px">Nine sections, built to be read by an operator. Every exhibit states its takeaway in the title and cites its source. Skim the headlines, or read it end to end.</p>
+    <div class="toc-list">
+      <div class="toc-row"><div class="toc-num">01</div><div><div class="toc-t">Executive Summary</div><div class="toc-d">The five findings that define the B2B SaaS visibility gap, and why 90% of brands are missing from the answer.</div></div><div class="toc-pg">04</div></div>
+      <div class="toc-row"><div class="toc-num">02</div><div><div class="toc-t">The New Software Buying Journey</div><div class="toc-d">From reference to inference. The consideration stage has collapsed into a single AI prompt, before any vendor knows.</div></div><div class="toc-pg">08</div></div>
+      <div class="toc-row"><div class="toc-num">03</div><div><div class="toc-t">The B2B SaaS Citation Landscape</div><div class="toc-d">90% invisible, five visibility tiers, the vertical benchmark, and the winner-take-most share-of-voice cliff.</div></div><div class="toc-pg">12</div></div>
+      <div class="toc-row"><div class="toc-num">04</div><div><div class="toc-t">Platform-by-Platform Citation Analysis</div><div class="toc-d">Four engines, four editorial philosophies. The concentrated citation pool and the 5 to 10% owned-content ceiling.</div></div><div class="toc-pg">16</div></div>
+      <div class="toc-row"><div class="toc-num">05</div><div><div class="toc-t">What Drives Citations in B2B SaaS</div><div class="toc-d">The trust-signal hierarchy, the inverted source pyramid, and the content types AI engines actually quote.</div></div><div class="toc-pg">20</div></div>
+      <div class="toc-row"><div class="toc-num">06</div><div><div class="toc-t">How Category Leaders Do It</div><div class="toc-d">Oliv AI, Vercel, and Mentimeter. Three case studies and the non-negotiables behind every top performer.</div></div><div class="toc-pg">23</div></div>
+      <div class="toc-row"><div class="toc-num">07</div><div><div class="toc-t">The GEO Playbook for B2B SaaS</div><div class="toc-d">The metric shift from clicks to citations, first moves by role, and a 90-day plan to close the vertical gap.</div></div><div class="toc-pg">26</div></div>
+      <div class="toc-row"><div class="toc-num">08</div><div><div class="toc-t">Forward Outlook: 12 to 24 Months</div><div class="toc-d">AI's share of B2B organic traffic, the move to agentic procurement, and a first-mover window that is closing.</div></div><div class="toc-pg">29</div></div>
+      <div class="toc-row"><div class="toc-num">09</div><div><div class="toc-t">Methodology, Sources &amp; References</div><div class="toc-d">How the benchmark was built, the source ledger, the limitations, and the full reference list behind every claim.</div></div><div class="toc-pg">31</div></div>
+    </div>
+  </div>
+  <div class="page-foot">
+    <svg class="pf-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span>&copy; 2026 MaximusLabs &middot; <b>AI Search in B2B SaaS 2026</b></span>
+    <span>02</span>
+  </div>
+</section>
+
+<!-- ============== FOUNDER'S NOTE ============== -->
+<section class="page">
+  <div class="runhead">
+    <svg class="rh-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span class="rh-right">A Note From the Founder</span>
+  </div>
+  <div class="pad">
+    <div class="eyebrow">A Note From the Founder</div>
+    <h2 class="h-sec" style="max-width:20ch">Your buyer already built the shortlist. You just were not on it.</h2>
+    <div class="hr-accent"></div>
+    <p class="lead">Here is what changed while most SaaS teams were still tuning their keyword rankings. The B2B software buyer stopped opening ten tabs and started opening one chat. They type a constraint-rich prompt, ChatGPT or Claude names three to five vendors, and the shortlist is built before a single salesperson knows the deal exists. If your brand is not in that answer, you are not losing a ranking. You are losing the deal before it starts.</p>
+    <p>Let me be blunt about the scale of this. In April 2025, 29% of B2B software buyers started their research in an AI chatbot. Eleven months later that figure was 51%. That is not an adoption curve, it is a step change. And the kicker: one in three buyers told G2 they purchased from a vendor they had never heard of before their AI research session. Brand awareness, the thing we spent two decades and enormous budgets building as a precondition for consideration, has partially broken down. The model decides who is credible now.</p>
+    <p>This is why I keep telling founders that GEO is not SEO with a new acronym. SEO was a keywords-and-backlinks game you could win on your own website. Generative Engine Optimization is a trust problem you mostly cannot solve on your own domain. We found that vendor websites contribute only 5 to 10% of the sources AI models draw on for software recommendations. The other 90% is what the rest of the web says about you: Reddit threads, G2 profiles, analyst posts, comparison guides. You do not optimize a page. You borrow the credibility of the sources the model already trusts.</p>
+    <p>And here is the part that should make you optimistic rather than anxious. Because 90% of brands are still invisible, the gap is wide open. Citation authority is not a function of how big you are. It is a function of execution discipline. Our most-cited client, Oliv AI, reached a 64% citation rate while billion-dollar incumbents in the same category sat near 30%. They did not outspend anyone. They built for the environment where their buyers actually do research.</p>
+    <div class="pullquote">
+      <div class="pq-t">Stop optimizing to rank. Start optimizing to be the answer your buyer's AI reads out loud.</div>
+    </div>
+    <p>Read this the way our team built it: as an operator's field guide, not a trends deck. Every number is sourced, and we say so when a figure is a projection rather than a measurement. The window for first-mover advantage in your category is open right now, and it is governed by the same compounding dynamics that made early SEO moats so durable. The only real question is whether you move before your competitors do, or after.</p>
+    <div style="display:flex;align-items:center;gap:16px;margin-top:38px;padding-top:26px;border-top:1px solid var(--line)">
+      <div style="width:52px;height:52px;border-radius:50%;background:var(--grad-btn);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+        <svg style="width:30px;height:30px" viewBox="0 0 48 48"><use href="#ml-mark-w"/></svg>
+      </div>
+      <div>
+        <div style="font-size:16px;font-weight:800;color:var(--navy)">Krishna Kaanth M</div>
+        <div style="font-size:13px;color:var(--muted);font-weight:600">Founder &amp; CEO, MaximusLabs</div>
+      </div>
+    </div>
+  </div>
+  <div class="page-foot">
+    <svg class="pf-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span>&copy; 2026 MaximusLabs &middot; <b>AI Search in B2B SaaS 2026</b></span>
+    <span>03</span>
+  </div>
+</section>
+
+<!-- ============== DIVIDER 01 ============== -->
+<section class="page divider">
+  <svg class="motif" viewBox="0 0 48 48"><use href="#ml-mark-w"/></svg>
+  <div class="dv-num">01</div>
+  <div class="dv-eyebrow">Executive Summary</div>
+  <h2 class="dv-title">Ninety percent of B2B SaaS brands are missing from the answer their buyer trusts most.</h2>
+  <p class="dv-dek">Five findings define the visibility gap. The buying journey has moved inside the model, citations behave like a cliff rather than a ramp, and the authority that wins them lives almost entirely off your own domain. Here is the whole picture in one place.</p>
+  <div style="position:absolute;left:74px;right:74px;bottom:32px;display:flex;justify-content:space-between;align-items:center;z-index:2;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#7fa8de;font-weight:700">
+    <span>AI Search in B2B SaaS 2026</span><span>04</span>
+  </div>
+</section>
+
+<!-- ============== SECTION 01.1 ============== -->
+<section class="page">
+  <div class="runhead">
+    <svg class="rh-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span class="rh-right">01 &middot; Executive Summary</span>
+  </div>
+  <div class="pad">
+    <div class="eyebrow">The Core Finding</div>
+    <h2 class="h-sec" style="max-width:24ch">The shortlist is now built inside an AI chat, before you know the buyer exists.</h2>
+    <div class="hr-accent"></div>
+    <p class="lead">B2B software buying used to begin with a search and a dozen open tabs. It now begins with a single, constraint-rich prompt. The buyer asks an AI assistant for the best tools for their stack, their team size, and their budget, and the model returns a shortlist of three to five vendors. That answer is the new top of funnel. The brands inside it advance. The 90% that are not named never enter the conversation, and in most cases never learn the deal existed.</p>
+    <div class="stat-grid c4">
+      <div class="stat-card">
+        <div class="sc-n">51<span class="u">%</span></div>
+        <div class="sc-l">of B2B buyers now begin software research inside an AI assistant</div>
+        <div class="sc-src">G2 Buyer Behavior, 2026 &middot; up from 29% in Apr 2025</div>
+      </div>
+      <div class="stat-card warn">
+        <div class="sc-n">90<span class="u">%</span></div>
+        <div class="sc-l">of 177 tracked SaaS brands have zero mentions in AI answers</div>
+        <div class="sc-src">MaximusLabs analysis &middot; 107,011 responses</div>
+      </div>
+      <div class="stat-card accent">
+        <div class="sc-n">69<span class="u">%</span></div>
+        <div class="sc-l">chose a different vendor than planned after AI research</div>
+        <div class="sc-src">G2 Buyer Behavior, 2026</div>
+      </div>
+      <div class="stat-card accent">
+        <div class="sc-n">33<span class="u">%</span></div>
+        <div class="sc-l">bought from a vendor they had not heard of before the AI session</div>
+        <div class="sc-src">G2 Buyer Behavior, 2026</div>
+      </div>
+    </div>
+    <h3 class="h-blk">The five findings that define the gap</h3>
+    <div class="numlist">
+      <div class="numitem">
+        <div class="ni-n">1</div>
+        <div>
+          <div class="ni-t">The shortlist forms in AI, before any vendor touch.</div>
+          <div class="ni-b">71% of buyers now use AI assistants for software research, and most have <strong>committed to a direction before a vendor is aware they exist</strong>. The first list of candidates is assembled by a model, not by your marketing.</div>
+        </div>
+      </div>
+      <div class="numitem">
+        <div class="ni-n">2</div>
+        <div>
+          <div class="ni-t">Absence, not low ranking, is the default state.</div>
+          <div class="ni-b">Across 107,011 AI responses, <strong>90% of 177 B2B SaaS brands were never mentioned once</strong>. The competitive question is no longer where you rank. It is whether you appear at all.</div>
+        </div>
+      </div>
+      <div class="numitem">
+        <div class="ni-n">3</div>
+        <div>
+          <div class="ni-t">Visibility is a cliff, not a ramp.</div>
+          <div class="ni-b">Elite brands are cited in 40% to 64% of relevant prompts. The next tier collapses to 8% to 15%, and most get nothing. <strong>There is no gentle middle.</strong> You are the answer, or you are invisible.</div>
+        </div>
+      </div>
+      <div class="numitem">
+        <div class="ni-n">4</div>
+        <div>
+          <div class="ni-t">The authority that wins citations lives off your domain.</div>
+          <div class="ni-b">Vendor websites supply only <strong>5% to 10% of the sources</strong> models cite for software recommendations. The other 90% is third-party: Reddit, G2, analyst posts, comparison guides. You cannot optimize your way in from your own site alone.</div>
+        </div>
+      </div>
+      <div class="numitem">
+        <div class="ni-n">5</div>
+        <div>
+          <div class="ni-t">The traffic AI sends converts, and converts better.</div>
+          <div class="ni-b">ChatGPT referrals convert to B2B SaaS trials at 2.4%, Perplexity referrals at up to 11x organic search, and AI Overview clicks carry a <strong>31% lift over non-branded organic</strong>. These are late-stage, pre-qualified buyers.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-foot">
+    <svg class="pf-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span>&copy; 2026 MaximusLabs &middot; <b>AI Search in B2B SaaS 2026</b></span>
+    <span>05</span>
+  </div>
+</section>
+
+<!-- ============== SECTION 01.2 ============== -->
+<section class="page">
+  <div class="runhead">
+    <svg class="rh-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span class="rh-right">01 &middot; Executive Summary</span>
+  </div>
+  <div class="pad">
+    <div class="eyebrow">The Numbers That Matter</div>
+    <h2 class="h-sec" style="max-width:26ch">Eight numbers that tell you the buying journey already moved.</h2>
+    <div class="hr-accent"></div>
+    <p class="lead">If you read nothing else, read these. Each one is sourced, and together they describe a market that has shifted underneath most go-to-market teams in under a year.</p>
+    <div class="findings">
+      <svg class="motif" viewBox="0 0 48 48"><use href="#ml-mark-w"/></svg>
+      <h3>The State of AI Search in B2B SaaS</h3>
+      <div class="find-grid">
+        <div class="find-item"><div class="fi-n">51<span class="u">%</span></div><div class="fi-t">of buyers start software research in an AI assistant</div><div class="fi-s">Up from 29% in 11 months</div></div>
+        <div class="find-item"><div class="fi-n">82<span class="u">%</span></div><div class="fi-t">of B2B tech queries now trigger a Google AI Overview</div><div class="fi-s">Up from 36%</div></div>
+        <div class="find-item"><div class="fi-n">90<span class="u">%</span></div><div class="fi-t">of tracked SaaS brands have zero AI mentions</div><div class="fi-s">177 brands, 107,011 responses</div></div>
+        <div class="find-item"><div class="fi-n">63<span class="u">%</span></div><div class="fi-t">buyer share for ChatGPT, driving 87% of AI referrals</div><div class="fi-s">Concentrated demand</div></div>
+        <div class="find-item"><div class="fi-n">&lt;10<span class="u">%</span></div><div class="fi-t">of cited sources come from vendor sites (just 5% to 10%)</div><div class="fi-s">90% is third-party</div></div>
+        <div class="find-item"><div class="fi-n">69<span class="u">%</span></div><div class="fi-t">switched vendors after AI research; 33% bought an unknown one</div><div class="fi-s">Awareness moat eroding</div></div>
+        <div class="find-item"><div class="fi-n">11<span class="u">x</span></div><div class="fi-t">Perplexity referral conversion vs organic search</div><div class="fi-s">High-intent traffic</div></div>
+        <div class="find-item"><div class="fi-n">35<span class="u">%</span></div><div class="fi-t">of all citations owned by just 10 domains</div><div class="fi-s">Winner-take-most pool</div></div>
+      </div>
+    </div>
+    <table class="tbl">
+      <thead>
+        <tr><th style="width:21%">Finding</th><th style="width:40%">What the data shows</th><th>Strategic implication for B2B SaaS</th><th style="width:11%">Severity</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Buyers start in AI</strong></td><td>51% begin in an AI assistant, up from 29% in 11 months.</td><td>The first shortlist forms before SEO, ads, or sales ever touch the buyer.</td><td><span class="pill high">High</span></td></tr>
+        <tr><td><strong>Most brands are invisible</strong></td><td>90% of 177 brands had zero mentions across 107,011 responses.</td><td>Absence is the default. The job is to appear, then to be preferred.</td><td><span class="pill crit">Critical</span></td></tr>
+        <tr><td><strong>Citations are winner-take-most</strong></td><td>Elite brands reach 40% to 64%; the middle tier sits at 8% to 15%.</td><td>There is no gentle gradient to climb. You are named, or you are not.</td><td><span class="pill crit">Critical</span></td></tr>
+        <tr><td><strong>Authority is off-domain</strong></td><td>Vendor sites are only 5% to 10% of cited sources.</td><td>You cannot win on your own website. You earn citations across the web.</td><td><span class="pill high">High</span></td></tr>
+        <tr><td><strong>AI traffic converts</strong></td><td>ChatGPT 2.4%, Perplexity up to 11x organic, AIO +31% vs non-branded.</td><td>The buyers AI sends are late-stage and high-intent. The prize is real.</td><td><span class="pill ok">Upside</span></td></tr>
+      </tbody>
+    </table>
+    <p class="muted" style="font-size:11px;margin-top:4px">Sources: G2 Buyer Behavior Report 2026; MaximusLabs citation analysis (177 brands, 107,011 responses); Profound and Semrush platform data; Seer Interactive and Previsible click-through studies. Full ledger in Section 09.</p>
+  </div>
+  <div class="page-foot">
+    <svg class="pf-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span>&copy; 2026 MaximusLabs &middot; <b>AI Search in B2B SaaS 2026</b></span>
+    <span>06</span>
+  </div>
+</section>
+
+<!-- ============== SECTION 01.3 ============== -->
+<section class="page">
+  <div class="runhead">
+    <svg class="rh-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span class="rh-right">01 &middot; Executive Summary</span>
+  </div>
+  <div class="pad">
+    <div class="eyebrow">The Shape of the Gap</div>
+    <h2 class="h-sec" style="max-width:26ch">The top of the market captures nearly every citation. The rest share scraps.</h2>
+    <div class="hr-accent"></div>
+    <p class="lead">When we plot citation rate against the share of brands at each level, the distribution is not a bell curve and it is not a smooth slope. It is a cliff. A thin band of elite brands is named in a large share of relevant prompts. Everyone below the cliff competes for single-digit visibility, and the overwhelming majority sit at zero.</p>
+    <div class="exhibit">
+      <div class="ex-head">
+        <div class="ex-kicker">Exhibit 01</div>
+        <div class="ex-title">Visibility is a cliff, not a ramp: a thin elite band captures most AI citations while roughly 90% of brands sit at zero.</div>
+        <div class="ex-sub">Citation rate by visibility tier (bar length), with the approximate share of tracked brands in each tier (right).</div>
+      </div>
+      <div class="barh val3">
+        <div class="barh-row">
+          <div class="barh-lab">Elite<span class="sub">50%+ citation rate</span></div>
+          <div class="barh-track"><div class="barh-fill s-strong" style="width:95%"><span class="v">57%</span></div></div>
+          <div class="barh-val">&approx;0.3% of brands</div>
+        </div>
+        <div class="barh-row">
+          <div class="barh-lab">Strong<span class="sub">30 to 50%</span></div>
+          <div class="barh-track"><div class="barh-fill s-medium" style="width:67%"><span class="v">40%</span></div></div>
+          <div class="barh-val">&approx;1% of brands</div>
+        </div>
+        <div class="barh-row">
+          <div class="barh-lab">Gaining<span class="sub">20 to 30%</span></div>
+          <div class="barh-track"><div class="barh-fill s-light" style="width:42%"><span class="v">25%</span></div></div>
+          <div class="barh-val">&approx;2.5% of brands</div>
+        </div>
+        <div class="barh-row">
+          <div class="barh-lab">Minimal<span class="sub">8 to 15%</span></div>
+          <div class="barh-track"><div class="barh-fill s-mute" style="width:18%"><span class="v">11%</span></div></div>
+          <div class="barh-val">&approx;6% of brands</div>
+        </div>
+        <div class="barh-row">
+          <div class="barh-lab">Invisible<span class="sub">0 mentions</span></div>
+          <div class="barh-track"><div class="barh-fill s-mute" style="width:2%"><span class="v outside">0%</span></div></div>
+          <div class="barh-val">&approx;90% of brands</div>
+        </div>
+      </div>
+      <div class="ex-source"><b>Source:</b> MaximusLabs analysis of 177 B2B SaaS brands across 107,011 AI responses. Citation rate is the share of relevant prompts in which a brand is named. Tier shares above Invisible are directional, derived from the observed distribution of the non-zero 10%.</div>
+    </div>
+    <div class="perspective">
+      <div class="persp-head">
+        <svg class="pmark" viewBox="0 0 48 48"><use href="#ml-mark"/></svg>
+        <span class="pt">MaximusLabs Perspective</span>
+        <span class="pby">Krishna Kaanth M, Founder</span>
+      </div>
+      <p class="lq">The cliff is not bad news. It is the opportunity. A market where 90% are invisible is a market where execution, not budget, decides who the model names.</p>
+      <p>I have watched founders read the 90% number two ways. The anxious read is, we are losing. The operator read is, almost no one has figured this out yet, so the first competent move in our category wins disproportionately. The second read is the correct one. Citation authority compounds the way early SEO authority compounded, and the brands that build it now will be very hard to dislodge in eighteen months. This report is the field guide for getting on the right side of that cliff before your competitors do.</p>
+    </div>
+  </div>
+  <div class="page-foot">
+    <svg class="pf-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span>&copy; 2026 MaximusLabs &middot; <b>AI Search in B2B SaaS 2026</b></span>
+    <span>07</span>
+  </div>
+</section>
+
+<!-- ============== DIVIDER 02 ============== -->
+<section class="page divider">
+  <svg class="motif" viewBox="0 0 48 48"><use href="#ml-mark-w"/></svg>
+  <div class="dv-num">02</div>
+  <div class="dv-eyebrow">The New Software Buying Journey</div>
+  <h2 class="dv-title">From reference to inference: the consideration stage collapsed into a single prompt.</h2>
+  <div class="dv-hyp">
+    <div class="lab">Working Hypothesis</div>
+    <p>If a model assembles the shortlist before any vendor is aware of the buyer, then the highest-leverage go-to-market investment shifts from capturing demand to becoming the source the model trusts when it answers.</p>
+  </div>
+  <div style="position:absolute;left:74px;right:74px;bottom:32px;display:flex;justify-content:space-between;align-items:center;z-index:2;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#7fa8de;font-weight:700">
+    <span>AI Search in B2B SaaS 2026</span><span>08</span>
+  </div>
+</section>
+
+<!-- ============== SECTION 02.1 ============== -->
+<section class="page">
+  <div class="runhead">
+    <svg class="rh-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span class="rh-right">02 &middot; The New Software Buying Journey</span>
+  </div>
+  <div class="pad">
+    <div class="eyebrow">The Funnel Inversion</div>
+    <h2 class="h-sec" style="max-width:27ch">Awareness used to come first. Now the decision often comes first, and awareness never comes at all.</h2>
+    <div class="hr-accent"></div>
+    <p class="lead">The classic funnel assumed a buyer who did not know you, became aware, then considered, then chose. AI search inverts the order. The buyer arrives at an assistant already knowing the problem, the model infers a credible set of vendors, and a working decision forms inside that single session. By the time a name reaches your CRM, the evaluation is often most of the way done.</p>
+    <div class="exhibit">
+      <div class="ex-head">
+        <div class="ex-kicker">Exhibit 02</div>
+        <div class="ex-title">In eleven months, AI went from a fringe research habit to the majority starting point for B2B software buyers.</div>
+      </div>
+      <div class="beforeafter">
+        <div class="ba-box ba-from"><div class="ba-n">29%</div><div class="ba-l">April 2025</div></div>
+        <div class="ba-arrow">&rarr;</div>
+        <div class="ba-box ba-to"><div class="ba-n">51%</div><div class="ba-l">Early 2026</div></div>
+      </div>
+      <div class="tc" style="margin-top:16px"><span class="delta up" style="font-size:13px">+76% growth in 11 months</span></div>
+      <div class="ex-source"><b>Source:</b> G2 Buyer Behavior Report, 2026. Share of B2B software buyers who begin product research inside an AI assistant.</div>
+    </div>
+    <h3 class="h-blk">The buyer is deep in the decision before you ever appear</h3>
+    <p>Adoption is only half the story. The more consequential shift is how far the buyer has progressed before any vendor enters the picture. Requirements are set, options are narrowed, and a preference is forming, all inside research the vendor cannot see.</p>
+    <div class="exhibit">
+      <div class="ex-head">
+        <div class="ex-kicker">Exhibit 03</div>
+        <div class="ex-title">Most of the buying work now happens before first contact, and it routinely overturns the buyer's starting assumptions.</div>
+        <div class="ex-sub">Share of B2B buyers reporting each behavior. Independent measures, not parts of a whole.</div>
+      </div>
+      <div class="barh">
+        <div class="barh-row">
+          <div class="barh-lab">Set requirements before contacting any vendor</div>
+          <div class="barh-track"><div class="barh-fill s-strong" style="width:95%"><span class="v">78%</span></div></div>
+        </div>
+        <div class="barh-row">
+          <div class="barh-lab">Use AI assistants for software research</div>
+          <div class="barh-track"><div class="barh-fill s-medium" style="width:87%"><span class="v">71%</span></div></div>
+        </div>
+        <div class="barh-row">
+          <div class="barh-lab">Chose a different vendor than planned after AI research</div>
+          <div class="barh-track"><div class="barh-fill s-medium" style="width:84%"><span class="v">69%</span></div></div>
+        </div>
+        <div class="barh-row">
+          <div class="barh-lab">Bought from a vendor unknown to them pre-AI</div>
+          <div class="barh-track"><div class="barh-fill s-light" style="width:40%"><span class="v">33%</span></div></div>
+        </div>
+      </div>
+      <div class="ex-source"><b>Source:</b> G2 Buyer Behavior Report 2026; Forrester and Gartner B2B buying research. Figures describe independent shares of buyers reporting each behavior.</div>
+    </div>
+    <div class="note">
+      <div class="nl">What this means</div>
+      <p>If 69% switch and 33% buy from a brand they had never heard of, brand awareness is no longer the precondition for consideration it was for two decades. The model now supplies the credibility that awareness used to.</p>
+    </div>
+  </div>
+  <div class="page-foot">
+    <svg class="pf-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span>&copy; 2026 MaximusLabs &middot; <b>AI Search in B2B SaaS 2026</b></span>
+    <span>09</span>
+  </div>
+</section>
+
+<!-- ============== SECTION 02.2 ============== -->
+<section class="page">
+  <div class="runhead">
+    <svg class="rh-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span class="rh-right">02 &middot; The New Software Buying Journey</span>
+  </div>
+  <div class="pad">
+    <div class="eyebrow">The Validation Loop</div>
+    <h2 class="h-sec" style="max-width:26ch">Buyers do not trust one source. They triangulate across three, in a fixed order.</h2>
+    <div class="hr-accent"></div>
+    <p class="lead">AI search did not kill the rest of the buying journey. It re-sequenced it. The dominant pattern we observe is a three-source loop: the assistant proposes the candidates, third-party sites validate them, and the vendor site confirms the details. A brand has to show up credibly at all three stops, because a gap at any stage quietly removes it from the set.</p>
+    <div class="exhibit">
+      <div class="ex-head">
+        <div class="ex-kicker">Exhibit 04</div>
+        <div class="ex-title">The modern evaluation runs AI first, third-party validation second, and the vendor site last, to confirm rather than discover.</div>
+      </div>
+      <div class="flow">
+        <div class="flow-step">
+          <div class="fs-n">Phase 1 &middot; Discover</div>
+          <div class="fs-t">Ask the assistant</div>
+          <div class="fs-io">The buyer describes their stack, team size, and budget and asks for the best options.<b>Output</b>A shortlist of 3 to 5 named vendors</div>
+        </div>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-step">
+          <div class="fs-n">Phase 2 &middot; Validate</div>
+          <div class="fs-t">Check third parties</div>
+          <div class="fs-io">The buyer pressure-tests the names on G2, Reddit, and comparison guides for real-world proof.<b>Output</b>A trusted set of 2 to 3 finalists</div>
+        </div>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-step">
+          <div class="fs-n">Phase 3 &middot; Confirm</div>
+          <div class="fs-t">Visit the vendor site</div>
+          <div class="fs-io">Only now does the buyer arrive on your domain, to confirm pricing, security, and fit.<b>Output</b>A demo request or self-serve trial</div>
+        </div>
+      </div>
+      <div class="ex-source"><b>Source:</b> MaximusLabs synthesis of buyer-journey research (G2, Forrester) and observed referral paths across client analytics, 2025 to 2026.</div>
+    </div>
+    <div class="cols" style="margin-top:30px">
+      <div>
+        <h3 class="h-sub">Deep research raises the stakes</h3>
+        <p>The newest assistant modes do not return a quick answer. They run multi-step research, read dozens of pages, and synthesize a structured comparison. The buyer reads the model's homework, not yours.</p>
+        <div class="stat-grid c2" style="margin-top:8px">
+          <div class="stat-card accent"><div class="sc-n">41<span class="u">%</span></div><div class="sc-l">of AI users have run a multi-step Deep Research session for a purchase</div><div class="sc-src">Profound, 2026</div></div>
+          <div class="stat-card"><div class="sc-n">41<span class="u">%</span></div><div class="sc-l">say comparing options is their single top use case for AI in buying</div><div class="sc-src">G2 Buyer Behavior, 2026</div></div>
+        </div>
+      </div>
+      <div>
+        <h3 class="h-sub">Why the order matters for you</h3>
+        <p>Each phase has a different owner. Phase 1 is won by being in the model's training and retrieval set. Phase 2 is won by what third parties say about you. Phase 3 is the only stage your own website fully controls, and it is the last one, not the first.</p>
+        <div class="note" style="margin-top:14px">
+          <div class="nl">The trap</div>
+          <p>Most SaaS teams pour budget into Phase 3, the page they own, and almost nothing into Phases 1 and 2, where the shortlist is actually decided.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-foot">
+    <svg class="pf-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span>&copy; 2026 MaximusLabs &middot; <b>AI Search in B2B SaaS 2026</b></span>
+    <span>10</span>
+  </div>
+</section>
+
+<!-- ============== SECTION 02.3 ============== -->
+<section class="page">
+  <div class="runhead">
+    <svg class="rh-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span class="rh-right">02 &middot; The New Software Buying Journey</span>
+  </div>
+  <div class="pad">
+    <div class="eyebrow">The Trust Transfer</div>
+    <h2 class="h-sec" style="max-width:26ch">The buyer transferred trust from your brand to the model that recommends it.</h2>
+    <div class="hr-accent"></div>
+    <p class="lead">The deepest change is not behavioral, it is psychological. Buyers increasingly treat the assistant's recommendation as a credible filter, the way they once treated an analyst quadrant or a trusted peer. That trust does not attach to your logo. It attaches to the answer. When the model names you, you inherit its credibility. When it does not, your awareness spend does not save you.</p>
+    <div class="stat-grid c3">
+      <div class="stat-card">
+        <div class="sc-n">85<span class="u">%</span></div>
+        <div class="sc-l">say AI search has reshaped how they discover and evaluate software</div>
+        <div class="sc-src">G2 Buyer Behavior, 2026</div>
+      </div>
+      <div class="stat-card accent">
+        <div class="sc-n">69<span class="u">%</span></div>
+        <div class="sc-l">ended up choosing a vendor other than the one they started with</div>
+        <div class="sc-src">G2 Buyer Behavior, 2026</div>
+      </div>
+      <div class="stat-card warn">
+        <div class="sc-n">33<span class="u">%</span></div>
+        <div class="sc-l">purchased from a vendor they had never heard of before the session</div>
+        <div class="sc-src">G2 Buyer Behavior, 2026</div>
+      </div>
+    </div>
+    <div class="perspective">
+      <div class="persp-head">
+        <svg class="pmark" viewBox="0 0 48 48"><use href="#ml-mark"/></svg>
+        <span class="pt">MaximusLabs Perspective</span>
+        <span class="pby">Krishna Kaanth M, Founder</span>
+      </div>
+      <p class="lq">You are no longer selling to the buyer first. You are selling to the model that briefs the buyer. Win the briefing, and you walk into the room already recommended.</p>
+      <p>I tell every founder the same thing. Picture a research analyst who has read everything ever written about your category, who your buyer now trusts implicitly, and who will name three vendors when asked. Your entire job is to make sure that analyst knows you, believes the third-party evidence about you, and has a clean reason to include you. That is not a campaign you run for a quarter. It is a position you build and defend, and it pays back every single time the question gets asked.</p>
+    </div>
+    <div class="note">
+      <div class="nl">The bottom line for Section 02</div>
+      <p>The consideration stage moved inside the model and largely out of your view. The work now is to be present and credible at all three stops of the validation loop, with the heaviest investment where you have the least control: the discovery prompt and the third-party validation.</p>
+    </div>
+  </div>
+  <div class="page-foot">
+    <svg class="pf-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span>&copy; 2026 MaximusLabs &middot; <b>AI Search in B2B SaaS 2026</b></span>
+    <span>11</span>
+  </div>
+</section>
+
+<!-- ============== DIVIDER 03 ============== -->
+<section class="page divider">
+  <svg class="motif" viewBox="0 0 48 48"><use href="#ml-mark-w"/></svg>
+  <div class="dv-num">03</div>
+  <div class="dv-eyebrow">The B2B SaaS Citation Landscape</div>
+  <h2 class="dv-title">Across 107,011 AI responses, nine in ten brands were never named once.</h2>
+  <p class="dv-dek">The landscape has two defining features. Visibility is concentrated in a thin elite, and the citations that exist are built almost entirely from sources you do not own. This section maps the tiers, the cliff between them, and how visibility varies by vertical.</p>
+  <div style="position:absolute;left:74px;right:74px;bottom:32px;display:flex;justify-content:space-between;align-items:center;z-index:2;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#7fa8de;font-weight:700">
+    <span>AI Search in B2B SaaS 2026</span><span>12</span>
+  </div>
+</section>
+
+<!-- ============== SECTION 03.1 ============== -->
+<section class="page">
+  <div class="runhead">
+    <svg class="rh-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span class="rh-right">03 &middot; The Citation Landscape</span>
+  </div>
+  <div class="pad">
+    <div class="eyebrow">The Invisibility Crisis</div>
+    <h2 class="h-sec" style="max-width:27ch">Most brands are not losing the citation race. They never entered it.</h2>
+    <div class="hr-accent"></div>
+    <p class="lead">A Q1 2026 study tested 177 established brands across 107,011 AI responses. Just 18 of them registered any measurable AI presence. The rest, 90%, were absent. And the structural reason matters as much as the number: when a model recommends software, it does not read your website. It synthesizes what credible third parties have said. Vendor sites supply only 5% to 10% of the sources behind a recommendation.</p>
+    <div class="exhibit">
+      <div class="ex-head">
+        <div class="ex-kicker">Exhibit 05</div>
+        <div class="ex-title">Two structural facts define the landscape: most brands are never cited, and the citations that exist are built from sources you do not own.</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center">
+        <div class="donut-wrap">
+          <svg class="donut" width="168" height="168" viewBox="0 0 170 170" role="img" aria-label="90 percent of brands have zero AI mentions">
+            <circle cx="85" cy="85" r="58" fill="none" stroke="#eef0f4" stroke-width="22"/>
+            <circle class="seg" cx="85" cy="85" r="58" fill="none" stroke="#001c64" stroke-width="22" stroke-dasharray="327.98 364.42" stroke-dashoffset="0" stroke-linecap="butt" transform="rotate(-90 85 85)"/>
+            <circle class="seg" cx="85" cy="85" r="58" fill="none" stroke="#449afb" stroke-width="22" stroke-dasharray="36.44 364.42" stroke-dashoffset="-327.98" stroke-linecap="butt" transform="rotate(-90 85 85)"/>
+            <text class="dc-n" x="85" y="80" text-anchor="middle">90%</text>
+            <text class="dc-l" x="85" y="99" text-anchor="middle">INVISIBLE</text>
+          </svg>
+          <div class="donut-legend">
+            <div class="dl-item"><span class="dl-dot" style="background:#001c64"></span><span class="dl-lab">Zero AI mentions</span><span class="dl-val">90%</span></div>
+            <div class="dl-item"><span class="dl-dot" style="background:#449afb"></span><span class="dl-lab">Cited at least once</span><span class="dl-val">10%</span></div>
+            <div style="font-size:11px;color:var(--muted);margin-top:4px;line-height:1.4">Only 18 of 177 tracked brands had measurable AI presence.</div>
+          </div>
+        </div>
+        <div class="donut-wrap">
+          <svg class="donut" width="168" height="168" viewBox="0 0 170 170" role="img" aria-label="92 percent of cited sources are third-party">
+            <circle cx="85" cy="85" r="58" fill="none" stroke="#eef0f4" stroke-width="22"/>
+            <circle class="seg" cx="85" cy="85" r="58" fill="none" stroke="#001c64" stroke-width="22" stroke-dasharray="335.27 364.42" stroke-dashoffset="0" stroke-linecap="butt" transform="rotate(-90 85 85)"/>
+            <circle class="seg" cx="85" cy="85" r="58" fill="none" stroke="#449afb" stroke-width="22" stroke-dasharray="29.15 364.42" stroke-dashoffset="-335.27" stroke-linecap="butt" transform="rotate(-90 85 85)"/>
+            <text class="dc-n" x="85" y="80" text-anchor="middle">92%</text>
+            <text class="dc-l" x="85" y="99" text-anchor="middle">THIRD-PARTY</text>
+          </svg>
+          <div class="donut-legend">
+            <div class="dl-item"><span class="dl-dot" style="background:#001c64"></span><span class="dl-lab">Third-party sources (Reddit, G2, press, forums)</span><span class="dl-val">~92%</span></div>
+            <div class="dl-item"><span class="dl-dot" style="background:#449afb"></span><span class="dl-lab">Your own vendor pages</span><span class="dl-val">5 to 10%</span></div>
+            <div style="font-size:11px;color:var(--muted);margin-top:4px;line-height:1.4">The model cites what others say about you, far more than what you say.</div>
+          </div>
+        </div>
+      </div>
+      <div class="ex-source"><b>Source:</b> Q1 2026 Brand AI Visibility Study (177 brands, 107,011 responses); McKinsey and industry source-composition analysis. Third-party share shown at the midpoint of the measured 5% to 10% owned-source range.</div>
+    </div>
+    <div class="note">
+      <div class="nl">Why this is the whole game</div>
+      <p>If 90% of brands are absent and 92% of citation fuel is off-domain, then the work is not writing more landing pages. It is becoming a brand that credible third parties describe clearly enough for a model to repeat.</p>
+    </div>
+  </div>
+  <div class="page-foot">
+    <svg class="pf-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span>&copy; 2026 MaximusLabs &middot; <b>AI Search in B2B SaaS 2026</b></span>
+    <span>13</span>
+  </div>
+</section>
+
+<!-- ============== SECTION 03.2 ============== -->
+<section class="page">
+  <div class="runhead">
+    <svg class="rh-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span class="rh-right">03 &middot; The Citation Landscape</span>
+  </div>
+  <div class="pad">
+    <div class="eyebrow">The Five Tiers</div>
+    <h2 class="h-sec" style="max-width:27ch">Visibility sorts into five tiers, and the jump between them is a cliff, not a step.</h2>
+    <div class="hr-accent"></div>
+    <p class="lead">Citation rate, the share of relevant queries in which a brand is named, is the organizing metric of AI search. It sorts the market into five tiers. What matters is not just where the lines fall, but how empty the space is between the bottom and the top, and how few brands occupy the heights.</p>
+    <table class="tbl">
+      <thead>
+        <tr><th style="width:14%">Tier</th><th class="num" style="width:14%">Citation rate</th><th>What it signals</th><th class="num" style="width:15%">Share of brands</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="pill crit">Invisible</span></td><td class="num hl">0%</td><td>No measurable AI presence. The brand is simply not in the answer set.</td><td class="num">&approx;90%</td></tr>
+        <tr><td><span class="pill found">Minimal</span></td><td class="num hl">8 to 15%</td><td>Some indexed content, occasional mention, no structured GEO program.</td><td class="num">&approx;6%</td></tr>
+        <tr><td><span class="pill high">Gaining</span></td><td class="num hl">20 to 30%</td><td>Active content strategy and early community signals are taking hold.</td><td class="num">&approx;2.5%</td></tr>
+        <tr><td><span class="pill high">Strong</span></td><td class="num hl">30 to 50%</td><td>Coordinated GEO across review platforms, UGC, and structured content.</td><td class="num">&approx;1%</td></tr>
+        <tr><td><span class="pill ok">Elite</span></td><td class="num hl">50%+</td><td>Systematic program with third-party signal amplification. Oliv AI: 64%.</td><td class="num">&approx;0.3%</td></tr>
+      </tbody>
+    </table>
+    <div class="exhibit flush">
+      <div class="ex-head">
+        <div class="ex-kicker">Exhibit 06</div>
+        <div class="ex-title">Citation authority is decoupled from company size: a disciplined challenger can out-cite incumbents with 10x to 100x its budget.</div>
+        <div class="ex-sub">Where brands land on AI citation rate (vertical) against off-domain authority and content density (horizontal).</div>
+      </div>
+      <div class="matrix">
+        <div class="matrix-yl">AI citation rate &rarr;</div>
+        <div class="matrix-grid">
+          <div class="mq mq-tl"><div class="mq-lab">Unstable highs<br>(rare, hard to hold)</div></div>
+          <div class="mq mq-tr"><div class="mq-lab" style="text-align:right">Category leaders<br>the goal state</div></div>
+          <div class="mq mq-bl"><div class="mq-lab">The invisible 90%</div></div>
+          <div class="mq mq-br"><div class="mq-lab" style="text-align:right">Busy but unseen<br>(spend on-domain only)</div></div>
+          <div class="bubble" style="left:75%;top:17%;width:88px;height:88px;font-size:19px;background:var(--grad-strong);transform:translate(-50%,-50%)"><div><div class="bb-n">64%</div><div class="bb-l">Oliv AI</div></div></div>
+          <div class="bubble" style="left:50%;top:50%;width:72px;height:72px;font-size:15px;background:var(--grad-medium);transform:translate(-50%,-50%)"><div><div class="bb-n">~30%</div><div class="bb-l">Incumbents</div></div></div>
+          <div class="bubble" style="left:21%;top:76%;width:100px;height:100px;font-size:18px;background:#c2ccdd;color:var(--ink);transform:translate(-50%,-50%)"><div><div class="bb-n">90%</div><div class="bb-l" style="opacity:.85">of brands<br>sit here</div></div></div>
+          <div class="bubble" style="left:80%;top:71%;width:58px;height:58px;font-size:12px;background:var(--grad-light);transform:translate(-50%,-50%)"><div><div class="bb-n">&lt;10%</div></div></div>
+        </div>
+      </div>
+      <div class="matrix-xl">Off-domain authority &amp; content density &rarr;</div>
+      <div class="ex-source"><b>Source:</b> MaximusLabs client benchmarks (Oliv AI) and citation-tier analysis. Bubble area is illustrative of the share of brands at each position. Incumbent figure is the observed ~30% category-leader baseline.</div>
+    </div>
+    <div class="note">
+      <div class="nl">The takeaway</div>
+      <p>Oliv AI, a challenger, reached 64% citation while incumbents with vastly larger budgets sat near 30%. Scale buys awareness. It does not buy citations. Execution does.</p>
+    </div>
+  </div>
+  <div class="page-foot">
+    <svg class="pf-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span>&copy; 2026 MaximusLabs &middot; <b>AI Search in B2B SaaS 2026</b></span>
+    <span>14</span>
+  </div>
+</section>
+
+<!-- ============== SECTION 03.3 ============== -->
+<section class="page">
+  <div class="runhead">
+    <svg class="rh-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span class="rh-right">03 &middot; The Citation Landscape</span>
+  </div>
+  <div class="pad">
+    <div class="eyebrow">The Vertical Benchmark</div>
+    <h2 class="h-sec" style="max-width:28ch">Your category sets your starting line. Some verticals are saturated; others are wide open.</h2>
+    <div class="hr-accent"></div>
+    <p class="lead">Citation density is not evenly distributed across B2B SaaS. Categories with deep technical documentation and active practitioner communities, developer tools and data infrastructure, over-index heavily in AI answers. Regulated, relationship-driven categories under-index, because less of their evaluation happens in public, citeable text. The gap between top and bottom is more than three times.</p>
+    <div class="exhibit">
+      <div class="ex-head">
+        <div class="ex-kicker">Exhibit 07</div>
+        <div class="ex-title">Developer and data categories lead AI visibility by a wide margin, while regulated categories trail by 3x or more.</div>
+        <div class="badge-row" style="margin:10px 0 0"><span class="badge" style="background:rgba(192,57,43,0.08);color:var(--error);border-color:rgba(192,57,43,0.2)">Directional model, not a precision benchmark</span></div>
+      </div>
+      <div class="barh">
+        <div class="barh-row"><div class="barh-lab">Developer Tools</div><div class="barh-track"><div class="barh-fill s-strong" style="width:95%"><span class="v">61%</span></div></div></div>
+        <div class="barh-row"><div class="barh-lab">Data &amp; AI Infra</div><div class="barh-track"><div class="barh-fill s-strong" style="width:84%"><span class="v">54%</span></div></div></div>
+        <div class="barh-row"><div class="barh-lab">Martech</div><div class="barh-track"><div class="barh-fill s-medium" style="width:75%"><span class="v">48%</span></div></div></div>
+        <div class="barh-row"><div class="barh-lab">Fintech</div><div class="barh-track"><div class="barh-fill s-medium" style="width:61%"><span class="v">39%</span></div></div></div>
+        <div class="barh-row"><div class="barh-lab">Cybersecurity</div><div class="barh-track"><div class="barh-fill s-medium" style="width:53%"><span class="v">34%</span></div></div></div>
+        <div class="barh-row"><div class="barh-lab">HR &amp; People Ops</div><div class="barh-track"><div class="barh-fill s-light" style="width:48%"><span class="v">31%</span></div></div></div>
+        <div class="barh-row"><div class="barh-lab">Sales Tech / CRM</div><div class="barh-track"><div class="barh-fill s-light" style="width:44%"><span class="v">28%</span></div></div></div>
+        <div class="barh-row"><div class="barh-lab">Healthcare IT</div><div class="barh-track"><div class="barh-fill s-light" style="width:33%"><span class="v">21%</span></div></div></div>
+        <div class="barh-row"><div class="barh-lab">Legal Tech</div><div class="barh-track"><div class="barh-fill s-light" style="width:27%"><span class="v">17%</span></div></div></div>
+        <div class="barh-row"><div class="barh-lab" style="color:var(--muted)">All B2B SaaS (avg.)</div><div class="barh-track"><div class="barh-fill s-mute" style="width:34%"><span class="v">22%</span></div></div></div>
+      </div>
+      <div class="ex-source"><b>Source:</b> MaximusLabs directional model. Vertical citation rates are modeled from observed platform citation logic and category content density, anchored to measured reference points. Treat as relative ordering, not absolute precision. Top three values consistent with MaximusLabs benchmark cover data.</div>
+    </div>
+    <div class="cols w-narrow">
+      <div>
+        <div class="note" style="margin-top:6px">
+          <div class="nl">The share-of-voice cliff</div>
+          <p>AI answers name three to five vendors. There is no position six to ten to settle for, the way there was on page one of Google. You are in the set, or you are nowhere, which makes share of voice brutally winner-take-most.</p>
+        </div>
+      </div>
+      <div>
+        <div class="stat-grid c2" style="margin:6px 0 0">
+          <div class="stat-card accent"><div class="sc-n">3<span class="u">to</span>5</div><div class="sc-l">vendors named in a typical AI software answer, with no runner-up tier</div><div class="sc-src">MaximusLabs analysis</div></div>
+          <div class="stat-card"><div class="sc-n">15<span class="u">to</span>25<span class="u">%</span></div><div class="sc-l">share-of-voice gains captured by early movers while rivals stay inactive</div><div class="sc-src">LinkedIn / Athena HQ, 2026</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="perspective">
+      <div class="persp-head">
+        <svg class="pmark" viewBox="0 0 48 48"><use href="#ml-mark"/></svg>
+        <span class="pt">MaximusLabs Perspective</span>
+        <span class="pby">Krishna Kaanth M, Founder</span>
+      </div>
+      <p class="lq">If your category is a laggard vertical, that is not a reason to wait. It is the clearest first-mover window you will ever get.</p>
+      <p>Founders in legal, healthcare, and fintech tell me their category just is not visible in AI yet, as if that settles it. I read it the opposite way. A category at 17% average citation is a category where almost no one has built the third-party authority that wins, which means the cost of becoming the obvious answer is at its lowest. The brands that move while the vertical is still quiet will own the citation real estate when their buyers fully arrive, and they will arrive. Quiet categories do not stay quiet.</p>
+    </div>
+  </div>
+  <div class="page-foot">
+    <svg class="pf-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span>&copy; 2026 MaximusLabs &middot; <b>AI Search in B2B SaaS 2026</b></span>
+    <span>15</span>
+  </div>
+</section>
+
+<!-- ============== DIVIDER 04 ============== -->
+<section class="page divider">
+  <svg class="motif" viewBox="0 0 48 48"><use href="#ml-mark-w"/></svg>
+  <div class="dv-num">04</div>
+  <div class="dv-eyebrow">Platform-by-Platform Citation Analysis</div>
+  <h2 class="dv-title">Four engines, four editorial philosophies, one concentrated pool of sources.</h2>
+  <p class="dv-dek">ChatGPT, Perplexity, Claude, and Google AI Overviews do not cite the web the same way. Each rewards a different source mix. But they all draw from a surprisingly small, third-party-dominated pool, which is exactly what makes it winnable.</p>
+  <div style="position:absolute;left:74px;right:74px;bottom:32px;display:flex;justify-content:space-between;align-items:center;z-index:2;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#7fa8de;font-weight:700">
+    <span>AI Search in B2B SaaS 2026</span><span>16</span>
+  </div>
+</section>
+
+<!-- ============== SECTION 04.1 ============== -->
+<section class="page">
+  <div class="runhead">
+    <svg class="rh-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span class="rh-right">04 &middot; Platform Citation Analysis</span>
+  </div>
+  <div class="pad">
+    <div class="eyebrow">A Concentrated Pool</div>
+    <h2 class="h-sec" style="max-width:27ch">The citation pool is small and shared. That is the bad news and the opening.</h2>
+    <div class="hr-accent"></div>
+    <p class="lead">When Goodie analyzed 5.7 million citation links across ChatGPT, Gemini, Claude, and Perplexity, it found the pool is heavily concentrated: just ten domains account for more than 35% of all citations in the B2B SaaS category. The list is dominated by review platforms, publishers, and communities, not vendor sites. That concentration is intimidating if you ignore it, and a gift if you work it, because earning presence on a handful of high-authority sources moves visibility across every engine at once.</p>
+    <div class="exhibit">
+      <div class="ex-head">
+        <div class="ex-kicker">Exhibit 08</div>
+        <div class="ex-title">Ten domains own more than a third of all B2B SaaS citations: win the pool, not the long tail.</div>
+      </div>
+      <div class="donut-wrap">
+        <svg class="donut" width="168" height="168" viewBox="0 0 170 170" role="img" aria-label="Top 10 domains own 35 percent of citations">
+          <circle cx="85" cy="85" r="58" fill="none" stroke="#eef0f4" stroke-width="22"/>
+          <circle class="seg" cx="85" cy="85" r="58" fill="none" stroke="#001c64" stroke-width="22" stroke-dasharray="127.55 364.42" stroke-dashoffset="0" stroke-linecap="butt" transform="rotate(-90 85 85)"/>
+          <text class="dc-n" x="85" y="80" text-anchor="middle">35%+</text>
+          <text class="dc-l" x="85" y="99" text-anchor="middle">TOP 10 DOMAINS</text>
+        </svg>
+        <div class="donut-legend">
+          <div class="dl-item"><span class="dl-dot" style="background:#001c64"></span><span class="dl-lab">Top 10 domains (G2, Reddit, Wikipedia, publishers)</span><span class="dl-val">35%+</span></div>
+          <div class="dl-item"><span class="dl-dot" style="background:#eef0f4;border:1px solid var(--line)"></span><span class="dl-lab">All other domains combined</span><span class="dl-val">~65%</span></div>
+          <div style="font-size:11.5px;color:var(--text-2);margin-top:6px;line-height:1.45;font-weight:500">The validators that feed AI answers are review platforms, UGC communities, and editorial publishers, the sources buyers already trust.</div>
+        </div>
+      </div>
+      <div class="ex-source"><b>Source:</b> Goodie AI Citation Study, analysis of 5.7 million citation links across ChatGPT, Gemini, Claude, and Perplexity, February to June 2025.</div>
+    </div>
+    <div class="stat-grid c3">
+      <div class="stat-card"><div class="sc-n">63<span class="u">%</span></div><div class="sc-l">ChatGPT's share of buyers among research-stage software buyers</div><div class="sc-src">G2 Answer Economy, 2026</div></div>
+      <div class="stat-card accent"><div class="sc-n">87<span class="u">%</span></div><div class="sc-l">of all AI referral traffic to websites originates from ChatGPT</div><div class="sc-src">AuthorityTech, 2026</div></div>
+      <div class="stat-card"><div class="sc-n">5.7<span class="u">M</span></div><div class="sc-l">citation links analyzed to map the source pool across four engines</div><div class="sc-src">Goodie, 2025</div></div>
+    </div>
+  </div>
+  <div class="page-foot">
+    <svg class="pf-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span>&copy; 2026 MaximusLabs &middot; <b>AI Search in B2B SaaS 2026</b></span>
+    <span>17</span>
+  </div>
+</section>
+
+<!-- ============== SECTION 04.2 ============== -->
+<section class="page">
+  <div class="runhead">
+    <svg class="rh-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span class="rh-right">04 &middot; Platform Citation Analysis</span>
+  </div>
+  <div class="pad">
+    <div class="eyebrow">Four Editorial Philosophies</div>
+    <h2 class="h-sec" style="max-width:28ch">Each engine trusts a different kind of source. A single-channel strategy leaves citations on the table.</h2>
+    <div class="hr-accent"></div>
+    <p class="lead">The platforms diverge sharply in what they cite. ChatGPT leans on Wikipedia and Reddit. Perplexity is the most diversified and the richest opportunity, averaging 7.3 source domains per answer against ChatGPT's 5.0. Claude favors long-form blogs and documentation. Gemini is anchored on affiliate review publishers. Optimizing for one and ignoring the rest leaves entire citation pools untouched.</p>
+    <table class="tbl">
+      <thead>
+        <tr><th style="width:15%">Platform</th><th style="width:38%">Primary citation sources</th><th class="num" style="width:17%">Sources / answer</th><th>B2B SaaS priority</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>ChatGPT</strong></td><td>Wikipedia (47.9% of top citations), Reddit and UGC</td><td class="num hl">5.0</td><td>Highest &middot; 63% buyer usage</td></tr>
+        <tr><td><strong>Perplexity</strong></td><td>Most diversified: Reddit (~46.7%), LinkedIn, Wikipedia, live news</td><td class="num hl">7.3</td><td>High &middot; best conversion rate</td></tr>
+        <tr><td><strong>Google AI Overviews</strong></td><td>YouTube, structured on-page content and schema</td><td class="num">AIO format</td><td>High &middot; 82% B2B tech trigger rate</td></tr>
+        <tr><td><strong>Claude</strong></td><td>Balanced UGC and publications; blogs ~43.8%</td><td class="num">Long-form</td><td>Medium &middot; precision-sensitive verticals</td></tr>
+        <tr><td><strong>Gemini</strong></td><td>Affiliate publishers: PCMag, TechRadar, G2, Capterra</td><td class="num">Affiliate</td><td>Medium &middot; review-site anchored</td></tr>
+      </tbody>
+    </table>
+    <div class="exhibit flush">
+      <div class="ex-head">
+        <div class="ex-kicker">Exhibit 09</div>
+        <div class="ex-title">The single most-cited source type differs by engine, so the content that wins differs too.</div>
+        <div class="ex-sub">Share of citations from each platform's dominant source type.</div>
+      </div>
+      <div class="donut-trio">
+        <div class="donut-card">
+          <div class="dc-plat">ChatGPT</div>
+          <div class="dc-meta">5.0 sources / answer &middot; 63% buyer share</div>
+          <svg class="donut" width="132" height="132" viewBox="0 0 170 170" role="img" aria-label="Wikipedia is 48 percent of ChatGPT citations">
+            <circle cx="85" cy="85" r="58" fill="none" stroke="#eef0f4" stroke-width="22"/>
+            <circle class="seg" cx="85" cy="85" r="58" fill="none" stroke="#0070e0" stroke-width="22" stroke-dasharray="174.60 364.42" stroke-dashoffset="0" stroke-linecap="butt" transform="rotate(-90 85 85)"/>
+            <text class="dc-n" x="85" y="80" text-anchor="middle">48%</text>
+            <text class="dc-l" x="85" y="99" text-anchor="middle">WIKIPEDIA</text>
+          </svg>
+          <div class="dc-cap">Wikipedia is 47.9% of top citations, with heavy Reddit UGC. <b>Win knowledge panels and community threads.</b></div>
+        </div>
+        <div class="donut-card">
+          <div class="dc-plat">Perplexity</div>
+          <div class="dc-meta">7.3 sources / answer &middot; 11x conversion</div>
+          <svg class="donut" width="132" height="132" viewBox="0 0 170 170" role="img" aria-label="Reddit is 47 percent of Perplexity citations">
+            <circle cx="85" cy="85" r="58" fill="none" stroke="#eef0f4" stroke-width="22"/>
+            <circle class="seg" cx="85" cy="85" r="58" fill="none" stroke="#003087" stroke-width="22" stroke-dasharray="170.18 364.42" stroke-dashoffset="0" stroke-linecap="butt" transform="rotate(-90 85 85)"/>
+            <text class="dc-n" x="85" y="80" text-anchor="middle">47%</text>
+            <text class="dc-l" x="85" y="99" text-anchor="middle">REDDIT</text>
+          </svg>
+          <div class="dc-cap">Reddit ~46.7%, plus LinkedIn and live news. <b>Breadth and recency win the most slots.</b></div>
+        </div>
+        <div class="donut-card">
+          <div class="dc-plat">Claude</div>
+          <div class="dc-meta">Long-form skew &middot; precision buyers</div>
+          <svg class="donut" width="132" height="132" viewBox="0 0 170 170" role="img" aria-label="Blogs are 44 percent of Claude citations">
+            <circle cx="85" cy="85" r="58" fill="none" stroke="#eef0f4" stroke-width="22"/>
+            <circle class="seg" cx="85" cy="85" r="58" fill="none" stroke="#449afb" stroke-width="22" stroke-dasharray="159.61 364.42" stroke-dashoffset="0" stroke-linecap="butt" transform="rotate(-90 85 85)"/>
+            <text class="dc-n" x="85" y="80" text-anchor="middle">44%</text>
+            <text class="dc-l" x="85" y="99" text-anchor="middle">BLOGS</text>
+          </svg>
+          <div class="dc-cap">Blogs ~43.8% of citations. <b>Depth, documentation, and named authors win.</b></div>
+        </div>
+      </div>
+      <div class="ex-source"><b>Source:</b> ZipTie cross-platform citation analysis and Synscribe source-slot data, 2026. Percentages are each platform's share of citations from its single dominant source type.</div>
+    </div>
+  </div>
+  <div class="page-foot">
+    <svg class="pf-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span>&copy; 2026 MaximusLabs &middot; <b>AI Search in B2B SaaS 2026</b></span>
+    <span>18</span>
+  </div>
+</section>
+
+<!-- ============== SECTION 04.3 ============== -->
+<section class="page">
+  <div class="runhead">
+    <svg class="rh-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span class="rh-right">04 &middot; Platform Citation Analysis</span>
+  </div>
+  <div class="pad">
+    <div class="eyebrow">The Platform Playbook</div>
+    <h2 class="h-sec" style="max-width:27ch">Five engines, five plays, and traffic that converts harder than organic search.</h2>
+    <div class="hr-accent"></div>
+    <p class="lead">Each platform rewards a specific move. And the payoff is not just visibility, it is conversion. AI referrals arrive late in the journey, already qualified, and they convert at a premium to ordinary search.</p>
+    <div class="sig-grid">
+      <div class="sig"><div class="sg-n">G</div><div><div class="sg-t">ChatGPT &middot; the volume platform</div><div class="sg-b">Win Reddit communities, accurate knowledge panels, and Wikipedia entity presence. Citation, not clicks, is the objective.</div><span class="sg-stat">63% of buyers &middot; 87% of AI referrals</span></div></div>
+      <div class="sig"><div class="sg-n">P</div><div><div class="sg-t">Perplexity &middot; the high-converting platform</div><div class="sg-b">Reward its diversity with multi-channel, source-rich, timely content. LinkedIn and fresh research earn slots.</div><span class="sg-stat">Up to 11x organic conversion</span></div></div>
+      <div class="sig"><div class="sg-n">A</div><div><div class="sg-t">Google AI Overviews &middot; the paid multiplier</div><div class="sg-b">Use YouTube and schema, and coordinate GEO with paid search on shared queries to capture the halo.</div><span class="sg-stat">+40% paid CTR lift when cited</span></div></div>
+      <div class="sig"><div class="sg-n">C</div><div><div class="sg-t">Claude &middot; the authority platform</div><div class="sg-b">Invest in long-form guides, technical documentation, and expert author attribution for precision-sensitive buyers.</div><span class="sg-stat">Blogs ~43.8% of citations</span></div></div>
+      <div class="sig"><div class="sg-n">M</div><div><div class="sg-t">Gemini &middot; the review-anchored platform</div><div class="sg-b">Earn ratings and editorial placement on G2, Capterra, PCMag, and TechRadar, the affiliates it leans on.</div><span class="sg-stat">Affiliate-led citations</span></div></div>
+      <div class="sig"><div class="sg-n">+</div><div><div class="sg-t">Across all five &middot; the constant</div><div class="sg-b">Third-party authority compounds across engines. One strong G2 or Reddit presence lifts citations everywhere at once.</div><span class="sg-stat">One pool, four engines</span></div></div>
+    </div>
+    <div class="exhibit">
+      <div class="ex-head">
+        <div class="ex-kicker">Exhibit 10</div>
+        <div class="ex-title">AI referrals are high-intent: transactional AI traffic out-converts Google organic, and Perplexity converts many times higher.</div>
+        <div class="ex-sub">Conversion rate by channel. Independent measures across different buyer-intent mixes.</div>
+      </div>
+      <div class="barh">
+        <div class="barh-row">
+          <div class="barh-lab">ChatGPT<span class="sub">transactional traffic</span></div>
+          <div class="barh-track"><div class="barh-fill s-strong" style="width:95%"><span class="v">6.9%</span></div></div>
+        </div>
+        <div class="barh-row">
+          <div class="barh-lab">Google organic<span class="sub">comparison baseline</span></div>
+          <div class="barh-track"><div class="barh-fill s-mute" style="width:74%"><span class="v">5.4%</span></div></div>
+        </div>
+        <div class="barh-row">
+          <div class="barh-lab">ChatGPT<span class="sub">B2B SaaS, blended</span></div>
+          <div class="barh-track"><div class="barh-fill s-medium" style="width:33%"><span class="v">2.4%</span></div></div>
+        </div>
+      </div>
+      <div class="legend" style="margin-top:16px">
+        <div class="lg"><span class="lc" style="background:var(--accent)"></span>ChatGPT B2B SaaS converts <b style="color:var(--ink);margin-left:4px">+31%</b>&nbsp;vs non-branded organic</div>
+        <div class="lg"><span class="lc" style="background:var(--sky)"></span>Perplexity referrals convert up to <b style="color:var(--ink);margin-left:4px">11x</b>&nbsp;standard organic</div>
+      </div>
+      <div class="ex-source"><b>Source:</b> First Page Sage (ChatGPT B2B SaaS, 160+ clients); Kevin Indig / Flow Agency (transactional and Google organic, June 2025); Visibility Labs (+31%); AuthorityTech (Perplexity 11x).</div>
+    </div>
+    <div class="perspective">
+      <div class="persp-head">
+        <svg class="pmark" viewBox="0 0 48 48"><use href="#ml-mark"/></svg>
+        <span class="pt">MaximusLabs Perspective</span>
+        <span class="pby">Krishna Kaanth M, Founder</span>
+      </div>
+      <p class="lq">Stop thinking in channels. The same third-party authority that wins ChatGPT wins Perplexity, Claude, and Gemini. You are building one reputation, and four engines read it.</p>
+      <p>Teams ask me which platform to optimize for first, and it is the wrong question. The platforms differ at the margin, Reddit here, blogs there, but they all triangulate the same credible third parties. A strong, well-structured G2 profile, a genuine Reddit presence, a piece of original research that gets cited, those compound across every engine simultaneously. Pick the highest-authority sources in your category and earn them properly. The platform-specific tuning is the last 20%, not the first.</p>
+    </div>
+  </div>
+  <div class="page-foot">
+    <svg class="pf-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span>&copy; 2026 MaximusLabs &middot; <b>AI Search in B2B SaaS 2026</b></span>
+    <span>19</span>
+  </div>
+</section>
+
+<!-- ============== DIVIDER 05 ============== -->
+<section class="page divider">
+  <svg class="motif" viewBox="0 0 48 48"><use href="#ml-mark-w"/></svg>
+  <div class="dv-num">05</div>
+  <div class="dv-eyebrow">What Drives Citations in B2B SaaS</div>
+  <h2 class="dv-title">What earns a citation is almost the opposite of what earns a click.</h2>
+  <p class="dv-dek">AI systems reward clarity, structure, and third-party credibility. They penalize the promotional language that fills most SaaS websites. The signals are measurable, and most of them are inside your control.</p>
+  <div style="position:absolute;left:74px;right:74px;bottom:32px;display:flex;justify-content:space-between;align-items:center;z-index:2;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#7fa8de;font-weight:700">
+    <span>AI Search in B2B SaaS 2026</span><span>20</span>
+  </div>
+</section>
+
+<!-- ============== SECTION 05.1 ============== -->
+<section class="page">
+  <div class="runhead">
+    <svg class="rh-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span class="rh-right">05 &middot; What Drives Citations</span>
+  </div>
+  <div class="pad">
+    <div class="eyebrow">The Six Signals</div>
+    <h2 class="h-sec" style="max-width:28ch">Five content qualities lift your citation odds. One suppresses them, and it is the one most sites lean on.</h2>
+    <hr class="hr-accent">
+    <p class="lead">Semrush analyzed thousands of AI responses to isolate what actually correlates with being cited. The pattern holds across engines. Content that answers cleanly, signals real expertise, and is built for extraction wins. Content that sells, with superlatives and calls to action, gets left out. The single negative signal, promotional tone, happens to be the native voice of the average marketing page.</p>
+
+    <div class="exhibit">
+      <div class="ex-head">
+        <div class="ex-kicker">Exhibit 11</div>
+        <div class="ex-title">Clarity and credibility lift citations. Promotional tone is the only signal that actively suppresses them.</div>
+        <div class="ex-sub">Correlation between content quality and AI citation probability, B2B SaaS responses</div>
+      </div>
+      <div class="barh">
+        <div class="barh-row">
+          <div class="barh-lab">Clarity &amp; summarization<span class="sub">leads with the answer</span></div>
+          <div class="barh-track"><div class="barh-fill s-strong" style="width:94%"><span class="v">+32.83%</span></div></div>
+        </div>
+        <div class="barh-row">
+          <div class="barh-lab">E-E-A-T signals<span class="sub">credentials, sourced data</span></div>
+          <div class="barh-track"><div class="barh-fill s-strong" style="width:88%"><span class="v">+30.64%</span></div></div>
+        </div>
+        <div class="barh-row">
+          <div class="barh-lab">Q&amp;A format<span class="sub">FAQ and comparison pages</span></div>
+          <div class="barh-track"><div class="barh-fill s-medium" style="width:73%"><span class="v">+25.45%</span></div></div>
+        </div>
+        <div class="barh-row">
+          <div class="barh-lab">Section structure<span class="sub">headers, lists, extractable units</span></div>
+          <div class="barh-track"><div class="barh-fill s-medium" style="width:65%"><span class="v">+22.91%</span></div></div>
+        </div>
+        <div class="barh-row">
+          <div class="barh-lab">Structured data<span class="sub">schema, FAQ and HowTo markup</span></div>
+          <div class="barh-track"><div class="barh-fill s-light" style="width:62%"><span class="v">+21.60%</span></div></div>
+        </div>
+        <div class="barh-row">
+          <div class="barh-lab">Promotional tone<span class="sub">superlatives, CTA density</span></div>
+          <div class="barh-track"><div class="barh-fill s-neg" style="width:75%"><span class="v">&minus;26.19%</span></div></div>
+        </div>
+      </div>
+      <div class="legend" style="margin-top:16px">
+        <div class="lg"><span class="lc" style="background:var(--accent)"></span>Positive correlation, raises the odds of being cited</div>
+        <div class="lg"><span class="lc" style="background:var(--error)"></span>Negative correlation, lowers them</div>
+      </div>
+      <div class="ex-source"><b>Source:</b> Semrush content correlation analysis of thousands of AI citations across ChatGPT, Google AI Mode, and Perplexity (2025 to 2026).</div>
+    </div>
+
+    <div class="note">
+      <div class="nl">The expensive irony</div>
+      <p>The only negative signal, promotional tone at &minus;26.19%, is the default register of the marketing site. A single "Transform your team today" call to action on an otherwise authoritative comparison page can measurably lower its odds of being cited. The work is often subtraction, not addition.</p>
+    </div>
+  </div>
+  <div class="page-foot">
+    <svg class="pf-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span>&copy; 2026 MaximusLabs &middot; <b>AI Search in B2B SaaS 2026</b></span>
+    <span>21</span>
+  </div>
+</section>
+
+<!-- ============== SECTION 05.2 ============== -->
+<section class="page">
+  <div class="runhead">
+    <svg class="rh-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span class="rh-right">05 &middot; What Drives Citations</span>
+  </div>
+  <div class="pad">
+    <div class="eyebrow">Sources &amp; Formats</div>
+    <h2 class="h-sec" style="max-width:27ch">The credibility that wins citations is built from the bottom up, and your own site is the narrow tip.</h2>
+    <hr class="hr-accent">
+    <p class="lead">Marketers instinctively picture their website at the center of the story. The models invert that picture. They lean hardest on independent validators, then on community and editorial context, and only lightly on what a vendor says about itself. The hierarchy below is the order of trust, and it is upside down from how most budgets are allocated.</p>
+
+    <div class="exhibit flush">
+      <div class="ex-head">
+        <div class="ex-kicker">Exhibit 12</div>
+        <div class="ex-title">Your website is the tip, not the base. Third-party validators carry the weight.</div>
+        <div class="ex-sub">The source-credibility hierarchy behind a typical software recommendation</div>
+      </div>
+      <div class="pyramid">
+        <div class="pyr-tier pyr-1">
+          <div class="pt-tag">Owned &middot; 5% to 10% of sources</div>
+          <div class="pt-t">Your website</div>
+          <div class="pt-d">Pricing, product, and docs pages. Necessary to close the deal, but a small minority of what models actually cite.</div>
+        </div>
+        <div class="pyr-tier pyr-2">
+          <div class="pt-tag">Earned &middot; community &amp; editorial</div>
+          <div class="pt-t">Reddit, LinkedIn, PCMag, TechRadar, Gartner Peer Insights</div>
+          <div class="pt-d">Forum threads, professional context, and affiliate best-of lists the engines pull from heavily, especially Perplexity and Gemini.</div>
+        </div>
+        <div class="pyr-tier pyr-3">
+          <div class="pt-tag">Earned &middot; third-party validators</div>
+          <div class="pt-t">G2, Capterra, TrustRadius, Software Advice</div>
+          <div class="pt-d">Structured social proof and comparative attribute data. The foundation of nearly every software recommendation, and the widest base of the citation pool.</div>
+        </div>
+      </div>
+      <div class="ex-source"><b>Source:</b> MaximusLabs synthesis of Goodie (5.7M citation links), Dataslayer, and HubSpot and Semrush source-mix studies. Vendor sites supply 5% to 10% of cited sources.</div>
+    </div>
+
+    <div class="exhibit">
+      <div class="ex-head">
+        <div class="ex-kicker">Exhibit 13</div>
+        <div class="ex-title">Six content formats do most of the citation work, because each maps to a buyer's prompt.</div>
+      </div>
+      <div class="sig-grid">
+        <div class="sig"><div class="sg-n">C</div><div><div class="sg-t">Comparison pages</div><div class="sg-b">"X vs Y" and "best tools for [use case]" pages answer the exact queries buyers run at evaluation stage.</div><span class="sg-stat">Mentimeter's comparison engine</span></div></div>
+        <div class="sig"><div class="sg-n">Q</div><div><div class="sg-t">FAQ &amp; definitional</div><div class="sg-b">Self-contained, question-anchored pages a model can lift whole as a passage-level answer.</div><span class="sg-stat">Built for extraction</span></div></div>
+        <div class="sig"><div class="sg-n">D</div><div><div class="sg-t">Original data &amp; research</div><div class="sg-b">Proprietary benchmarks and survey data carry strong E-E-A-T. Models cite them as primary sources.</div><span class="sg-stat">Primary-source authority</span></div></div>
+        <div class="sig"><div class="sg-n">T</div><div><div class="sg-t">Technical documentation</div><div class="sg-b">Concise summaries, structured headers, and consistent terminology. The core of Vercel's citation success.</div><span class="sg-stat">Vercel's citation engine</span></div></div>
+        <div class="sig"><div class="sg-n">I</div><div><div class="sg-t">Use case &amp; integration pages</div><div class="sg-b">"Does [Product] integrate with [Tool]?" pages match how buyers actually construct prompts.</div><span class="sg-stat">High-intent queries</span></div></div>
+        <div class="sig"><div class="sg-n">E</div><div><div class="sg-t">Case studies, named outcomes</div><div class="sg-b">Quantified, company-specific results read as citeable evidence. "Our customers love us" does not.</div><span class="sg-stat">Evidence, not adjectives</span></div></div>
+      </div>
+      <div class="ex-source"><b>Source:</b> GEO case study analysis, MaximusLabs; platform citation-behavior studies (2025 to 2026).</div>
+    </div>
+
+    <div class="perspective">
+      <div class="persp-head">
+        <svg class="pmark" viewBox="0 0 48 48"><use href="#ml-mark"/></svg>
+        <span class="pt">MaximusLabs Perspective</span>
+        <span class="pby">Krishna Kaanth M, Founder</span>
+      </div>
+      <p class="lq">A model does not cite your page. It cites a passage. Write so any 75 to 225 word block can stand alone as the answer, and you have done most of the job.</p>
+      <p>This is the mental shift I push hardest with founders. Stop optimizing pages and start optimizing passages. A good answer block opens with the claim, supports it with a number and a source, and needs no surrounding context to make sense. It is also why third-party presence compounds so fast. When research from February 2026 showed a G2 acquisition correlating with a 76% jump in citations, it was not magic. The model simply found more clean, structured, credible passages about that brand in a property it already trusts. Earn those passages, on your site and off it, and the citations follow.</p>
+    </div>
+  </div>
+  <div class="page-foot">
+    <svg class="pf-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span>&copy; 2026 MaximusLabs &middot; <b>AI Search in B2B SaaS 2026</b></span>
+    <span>22</span>
+  </div>
+</section>
+
+<!-- ============== DIVIDER 06 ============== -->
+<section class="page divider">
+  <svg class="motif" viewBox="0 0 48 48"><use href="#ml-mark-w"/></svg>
+  <div class="dv-num">06</div>
+  <div class="dv-eyebrow">How Category Leaders Do It</div>
+  <h2 class="dv-title">The brands winning AI search are not the biggest. They are the most deliberate.</h2>
+  <p class="dv-dek">Three companies, three different tactics, one identical principle. Each made itself the easiest credible thing for a model to quote. Oliv AI engineered third-party presence, Vercel engineered documentation, Mentimeter engineered comparison pages.</p>
+  <div style="position:absolute;left:74px;right:74px;bottom:32px;display:flex;justify-content:space-between;align-items:center;z-index:2;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#7fa8de;font-weight:700">
+    <span>AI Search in B2B SaaS 2026</span><span>23</span>
+  </div>
+</section>
+
+<!-- ============== SECTION 06.1 ============== -->
+<section class="page">
+  <div class="runhead">
+    <svg class="rh-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span class="rh-right">06 &middot; How Category Leaders Do It</span>
+  </div>
+  <div class="pad">
+    <div class="eyebrow">Case Study 01</div>
+    <h2 class="h-sec" style="max-width:28ch">Oliv AI out-cited billion-dollar incumbents by engineering citations, not buying awareness.</h2>
+    <hr class="hr-accent">
+    <p class="lead">Oliv AI sells sales intelligence into a category run by well-funded incumbents with every brand-recognition advantage. It did not try to outspend them. It ran a disciplined Answer Engine Optimization program and landed in the Elite citation tier while the incumbents sat at roughly half its citation rate. This is the clearest evidence in the dataset that AI visibility is earned by execution, not budget.</p>
+
+    <div class="case-hd">
+      <span class="ch-badge">Case 01</span>
+      <span class="ch-t">Oliv AI: a challenger in the Elite tier</span>
+    </div>
+
+    <div class="case-grid">
+      <div class="case-mini"><div class="cm-n">64%</div><div class="cm-l">Citation rate across tracked AI queries, firmly in the Elite tier</div></div>
+      <div class="case-mini"><div class="cm-n">&approx;30%</div><div class="cm-l">Where billion-dollar category incumbents registered</div></div>
+      <div class="case-mini"><div class="cm-n">10<span class="u">to</span>100x</div><div class="cm-l">The ARR and budget advantage Oliv out-cited</div></div>
+    </div>
+
+    <div class="exhibit">
+      <div class="ex-head">
+        <div class="ex-kicker">Exhibit 14</div>
+        <div class="ex-title">Anatomy of an Elite-tier program: four moves, no media budget.</div>
+      </div>
+      <div class="cap-row"><div class="cr-k">Context</div><div class="cr-v">B2B sales intelligence, a category dominated by well-funded incumbents with large brand-recognition advantages.</div></div>
+      <div class="cap-row"><div class="cr-k">Approach</div><div class="cr-v">A systematic AEO program: structured content built for evaluation-stage buyer queries, review-platform signal amplification on G2 and peers, and deliberate community presence across Reddit and LinkedIn.</div></div>
+      <div class="cap-row"><div class="cr-k">Result</div><div class="cr-v">A 64% citation rate across tracked AI queries, Elite tier, while category incumbents registered citation rates near 30%.</div></div>
+      <div class="cap-row"><div class="cr-k">Why it won</div><div class="cr-v">Citation authority is decoupled from brand scale. First-mover citation presence compounds into entity authority that late movers cannot easily buy back.</div></div>
+      <div class="ex-source"><b>Source:</b> MaximusLabs client data (Oliv AI), anonymized AEO engagement results. Individual outcomes vary by category competitiveness and program investment.</div>
+    </div>
+
+    <div class="note">
+      <div class="nl">The principle</div>
+      <p>Scale buys awareness. It does not buy citations. Oliv won the answer box by engineering credible, extractable presence across the sources models actually read, not by outspending anyone in the category.</p>
+    </div>
+  </div>
+  <div class="page-foot">
+    <svg class="pf-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span>&copy; 2026 MaximusLabs &middot; <b>AI Search in B2B SaaS 2026</b></span>
+    <span>24</span>
+  </div>
+</section>
+
+<!-- ============== SECTION 06.2 ============== -->
+<section class="page">
+  <div class="runhead">
+    <svg class="rh-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span class="rh-right">06 &middot; How Category Leaders Do It</span>
+  </div>
+  <div class="pad">
+    <div class="eyebrow">Case Studies 02 &amp; 03</div>
+    <h2 class="h-sec" style="max-width:30ch">Two more playbooks: documentation that reads like answers, and comparison pages that own the "versus" query.</h2>
+    <hr class="hr-accent">
+    <p class="lead">Oliv engineered its off-domain footprint. The next two leaders won from their own sites, by building exactly the formats their buyers' prompts demand. Neither did SEO louder. Each made its answer the cleanest, most quotable option in its category.</p>
+
+    <div class="case-hd">
+      <span class="ch-badge">Case 02</span>
+      <span class="ch-t">Vercel: technical documentation as a citation engine</span>
+    </div>
+    <div class="cap-row"><div class="cr-k">Approach</div><div class="cr-v">Citation performance built on documentation architecture, not paid promotion. Every docs page opens with a clear, citation-ready summary, uses consistent structured headers and code blocks, defines terms uniformly, and stays evergreen.</div></div>
+    <div class="cap-row"><div class="cr-k">Result</div><div class="cr-v">Consistent citation across ChatGPT, Perplexity, and Claude for developer-infrastructure queries, tracking the citation signals directly: clarity, structure, E-E-A-T, and non-promotional tone.</div></div>
+    <div class="cap-row"><div class="cr-k">For you</div><div class="cr-v">A strong documentation culture is a latent GEO asset. The work is converting technical accuracy into deliberate passage-level citation engineering.</div></div>
+
+    <div class="case-hd" style="margin-top:26px">
+      <span class="ch-badge">Case 03</span>
+      <span class="ch-t">Mentimeter: comparison content as the citation category</span>
+    </div>
+    <div class="cap-row"><div class="cr-k">Approach</div><div class="cr-v">Comparison-focused content built directly for the "versus" queries AI systems receive constantly. Pages were organized around user needs, educator versus business professional, not product features.</div></div>
+    <div class="cap-row"><div class="cr-k">Result</div><div class="cr-v">Consistent AI citations for presentation-tool comparison queries, which map to the single most common use case for AI chatbots in software research.</div></div>
+    <div class="cap-row"><div class="cr-k">For you</div><div class="cr-v">Own the comparison query in your category before a competitor does. It maps exactly to how buyers construct prompts at the evaluation stage.</div></div>
+
+    <div class="perspective">
+      <div class="persp-head">
+        <svg class="pmark" viewBox="0 0 48 48"><use href="#ml-mark"/></svg>
+        <span class="pt">MaximusLabs Perspective</span>
+        <span class="pby">Krishna Kaanth M, Founder</span>
+      </div>
+      <p class="lq">Three companies, three tactics, one move. Each found the exact format its buyers' prompts demanded, and made its answer the cleanest one a model could quote.</p>
+      <p>People want a single channel to copy, and there is not one. Oliv's lever was third-party presence, Vercel's was documentation, Mentimeter's was comparison pages. What they share is the discipline underneath. Each picked the query a real buyer actually types, then engineered the most credible, best-sourced, most extractable passage that answers it. That is the entire playbook. Not louder marketing, but quotable substance placed exactly where the model is already looking.</p>
+    </div>
+  </div>
+  <div class="page-foot">
+    <svg class="pf-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span>&copy; 2026 MaximusLabs &middot; <b>AI Search in B2B SaaS 2026</b></span>
+    <span>25</span>
+  </div>
+</section>
+
+<!-- ============== DIVIDER 07 ============== -->
+<section class="page divider">
+  <svg class="motif" viewBox="0 0 48 48"><use href="#ml-mark-w"/></svg>
+  <div class="dv-num">07</div>
+  <div class="dv-eyebrow">The GEO Playbook for B2B SaaS</div>
+  <h2 class="dv-title">Stop optimizing to rank. Start optimizing to be the answer your buyer's AI reads out loud.</h2>
+  <p class="dv-dek">The shift is not a new set of tactics bolted onto SEO. It is a new scoreboard, a new content architecture, and a clear sequence of moves. What follows is segmented by who you are and what you control, then made concrete in a 90-day plan.</p>
+  <div style="position:absolute;left:74px;right:74px;bottom:32px;display:flex;justify-content:space-between;align-items:center;z-index:2;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#7fa8de;font-weight:700">
+    <span>AI Search in B2B SaaS 2026</span><span>26</span>
+  </div>
+</section>
+
+<!-- ============== SECTION 07.1 ============== -->
+<section class="page">
+  <div class="runhead">
+    <svg class="rh-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span class="rh-right">07 &middot; The GEO Playbook</span>
+  </div>
+  <div class="pad">
+    <div class="eyebrow">The Metric Shift</div>
+    <h2 class="h-sec" style="max-width:29ch">The old scoreboard measures a game that is ending. Change what you count first.</h2>
+    <hr class="hr-accent">
+    <p class="lead">Organic clicks, keyword rankings, and pageviews are lagging indicators in an AI-first world. They describe traffic to a website that the buyer increasingly never visits before the shortlist is set. Before you change a single page, change the scoreboard. Then assign the work by who owns it.</p>
+
+    <div class="exhibit flush">
+      <div class="ex-head">
+        <div class="ex-kicker">Exhibit 15</div>
+        <div class="ex-title">Retire the click metrics. Adopt the citation metrics. They measure where the decision now happens.</div>
+      </div>
+      <table class="tbl">
+        <thead><tr><th>Retire, or demote to lagging</th><th>Adopt as the leading indicator</th></tr></thead>
+        <tbody>
+          <tr><td>Organic clicks &amp; sessions</td><td class="hl"><b>Citation rate</b> &middot; share of tracked queries where AI names you</td></tr>
+          <tr><td>Keyword rankings</td><td class="hl"><b>Share of voice</b> &middot; your citations as a percent of all vendor citations in the category</td></tr>
+          <tr><td>Raw pageviews</td><td class="hl"><b>AI referral conversion</b> &middot; target 2.4% or higher for B2B SaaS</td></tr>
+          <tr><td>Backlink count</td><td class="hl"><b>Review profile health</b> &middot; completeness and rating velocity on G2, Capterra, TrustRadius</td></tr>
+        </tbody>
+      </table>
+      <div class="ex-source"><b>Source:</b> MaximusLabs GEO measurement framework; First Page Sage (2.4% B2B SaaS conversion benchmark); G2 buyer-journey research.</div>
+    </div>
+
+    <div class="eyebrow" style="margin-top:38px">The Playbook, By Role</div>
+    <p class="lead" style="margin-bottom:0">Same destination, different starting point. Each role owns a distinct lever in the citation system.</p>
+    <div class="rec-cols">
+      <div class="rec-col">
+        <div class="rc-hd"><span>For</span>Founders &amp; CEOs</div>
+        <ol>
+          <li>Make <strong>brand citability</strong> the priority, not awareness. A brand buyers have never heard of can still win the shortlist.</li>
+          <li>Run an <strong>AI visibility audit</strong>. Query ChatGPT, Perplexity, Claude, and Google AI on your 20 most valuable buyer queries and benchmark where you appear.</li>
+          <li>Declare <strong>GEO a P1 initiative</strong>. Fewer than 20% of brands track AI presence, so measurement alone is an edge.</li>
+          <li>Fund <strong>third-party content</strong> as primary infrastructure, not an afterthought.</li>
+        </ol>
+      </div>
+      <div class="rec-col">
+        <div class="rc-hd"><span>For</span>CMOs &amp; Marketing Leaders</div>
+        <ol>
+          <li>Treat the shift as <strong>architectural, not additive</strong>. A few GEO posts on top of an SEO plan will not move citation rates.</li>
+          <li>Build <strong>comparison content at scale</strong>: a structured, non-promotional page for every competitor pair you face.</li>
+          <li>Invest in <strong>review platforms</strong> as citation infrastructure, with active solicitation and rating management.</li>
+          <li>Build genuine <strong>Reddit presence</strong> and publish <strong>original first-party data</strong>.</li>
+        </ol>
+      </div>
+      <div class="rec-col">
+        <div class="rc-hd"><span>For</span>Demand Generation Leaders</div>
+        <ol>
+          <li>Reframe metrics first: <strong>citation rate, share of voice, AI referral conversion, review health</strong>.</li>
+          <li>Fund all three stages of the buyer loop: <strong>AI citation, review strength, website conversion</strong>. A gap anywhere collapses the funnel.</li>
+          <li>Coordinate <strong>GEO and SEM</strong> on a shared query list. AI citation lifts paid CTR by roughly 40%.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="page-foot">
+    <svg class="pf-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span>&copy; 2026 MaximusLabs &middot; <b>AI Search in B2B SaaS 2026</b></span>
+    <span>27</span>
+  </div>
+</section>
+
+<!-- ============== SECTION 07.2 ============== -->
+<section class="page">
+  <div class="runhead">
+    <svg class="rh-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span class="rh-right">07 &middot; The GEO Playbook</span>
+  </div>
+  <div class="pad">
+    <div class="eyebrow">For Content &amp; SEO Teams</div>
+    <h2 class="h-sec" style="max-width:28ch">The optimization target is the passage, not the page. Build every section to stand alone.</h2>
+    <hr class="hr-accent">
+    <p class="lead">Models extract self-contained answer segments of roughly 75 to 225 words from longer pages. Every section should work as a standalone citable unit: open with a direct answer to the question the section implies, support it with evidence and a source, and close with the implication. Implement the five signals systematically, and audit out the one that hurts.</p>
+
+    <div class="numlist">
+      <div class="numitem">
+        <div class="ni-n">1</div>
+        <div>
+          <div class="ni-t">Clarity, every section opens with the answer.</div>
+          <div class="ni-b">Lead each block with a one-sentence direct answer that can be paraphrased and lifted whole. This single signal carries the strongest positive correlation with citation, at <strong>+32.83%</strong>.</div>
+        </div>
+      </div>
+      <div class="numitem">
+        <div class="ni-n">2</div>
+        <div>
+          <div class="ni-t">E-E-A-T on every substantive page.</div>
+          <div class="ni-b">Author credentials, named data sources, and first-person expertise signals. Models treat sourced, attributed content as <strong>primary evidence</strong>, not marketing copy.</div>
+        </div>
+      </div>
+      <div class="numitem">
+        <div class="ni-n">3</div>
+        <div>
+          <div class="ni-t">Q&amp;A format as a first-class asset.</div>
+          <div class="ni-b">Convert FAQs into structured, schema-marked content rather than burying them. <strong>Question-anchored pages</strong> are the easiest passages for a model to extract.</div>
+        </div>
+      </div>
+      <div class="numitem">
+        <div class="ni-n">4</div>
+        <div>
+          <div class="ni-t">Section structure that states findings.</div>
+          <div class="ni-b">Write H2 and H3 headers as answer-bearing statements, not topic labels. <strong>"ChatGPT citations favor Reddit"</strong> beats "ChatGPT Citation Behavior" every time.</div>
+        </div>
+      </div>
+      <div class="numitem">
+        <div class="ni-n">5</div>
+        <div>
+          <div class="ni-t">Schema markup where it applies.</div>
+          <div class="ni-b">FAQ, HowTo, and Article schema surface semantic meaning beyond raw text and lift citation odds by <strong>+21.60%</strong>.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="note">
+      <div class="nl">Then subtract</div>
+      <p>Audit and eliminate promotional tone. At a &minus;26.19% citation correlation, marketing language actively suppresses citation. A single "Transform your sales team today" call to action can reduce the citation likelihood of an otherwise authoritative page.</p>
+    </div>
+
+    <div class="exhibit">
+      <div class="ex-head">
+        <div class="ex-kicker">Exhibit 16</div>
+        <div class="ex-title">A 90-day path from invisible to measured: audit, rebuild, amplify.</div>
+        <div class="ex-sub">Sequenced so each phase produces an asset the next phase compounds</div>
+      </div>
+      <div class="roadmap">
+        <div class="rm-bar">
+          <div class="rm-seg" style="grid-column:span 4;background:var(--grad-strong)">Audit</div>
+          <div class="rm-seg" style="grid-column:span 4;background:var(--grad-medium)">Build</div>
+          <div class="rm-seg" style="grid-column:span 4;background:var(--grad-light)">Amplify</div>
+        </div>
+        <div class="rm-months">
+          <div class="rm-mo" style="grid-column:span 4">Weeks 1 to 4</div>
+          <div class="rm-mo" style="grid-column:span 4">Weeks 5 to 8</div>
+          <div class="rm-mo" style="grid-column:span 4">Weeks 9 to 12</div>
+        </div>
+        <div class="rm-card">
+          <div class="rc-ph">Phase 1 &middot; Audit<span class="mo">Weeks 1 to 4</span></div>
+          <div class="rc-b">Benchmark <strong>citation rate and share of voice</strong> across ChatGPT, Perplexity, Claude, and Google AI on your 20 highest-value queries. Map which competitors dominate and where you are absent. Declare GEO a P1 initiative and set the baseline you will measure against.</div>
+        </div>
+        <div class="rm-card">
+          <div class="rc-ph">Phase 2 &middot; Build<span class="mo">Weeks 5 to 8</span></div>
+          <div class="rc-b">Restructure priority pages into <strong>passage-level answers</strong>. Ship comparison pages for every competitor pair, convert FAQs into schema-marked assets, and strip promotional tone from anything you want cited.</div>
+        </div>
+        <div class="rm-card">
+          <div class="rc-ph">Phase 3 &middot; Amplify<span class="mo">Weeks 9 to 12</span></div>
+          <div class="rc-b">Activate <strong>third-party signals</strong>: G2 and review profiles, genuine Reddit presence, and one original data asset. Coordinate GEO and SEM on a shared query list, then re-measure citation rate against the Phase 1 baseline.</div>
+        </div>
+      </div>
+      <div class="ex-source"><b>Source:</b> MaximusLabs GEO engagement model. Timeline is a directional template; pace varies with category competitiveness and content backlog.</div>
+    </div>
+  </div>
+  <div class="page-foot">
+    <svg class="pf-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span>&copy; 2026 MaximusLabs &middot; <b>AI Search in B2B SaaS 2026</b></span>
+    <span>28</span>
+  </div>
+</section>
+
+<!-- ============== DIVIDER 08 ============== -->
+<section class="page divider">
+  <svg class="motif" viewBox="0 0 48 48"><use href="#ml-mark-w"/></svg>
+  <div class="dv-num">08</div>
+  <div class="dv-eyebrow">Forward Outlook: 12 to 24 Months</div>
+  <h2 class="dv-title">The window is open now, and it is closing. Early movers are compounding authority the rest cannot buy back.</h2>
+  <div class="dv-hyp">
+    <div class="lab">Working Hypothesis</div>
+    <p>AI-sourced traffic, agentic procurement, and citation concentration all move in the same direction over the next 24 months. The brands that establish citation presence before their category gets crowded will hold a structural advantage that late capital cannot easily reverse.</p>
+  </div>
+  <div style="position:absolute;left:74px;right:74px;bottom:32px;display:flex;justify-content:space-between;align-items:center;z-index:2;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#7fa8de;font-weight:700">
+    <span>AI Search in B2B SaaS 2026</span><span>29</span>
+  </div>
+</section>
+
+<!-- ============== SECTION 08.1 ============== -->
+<section class="page">
+  <div class="runhead">
+    <svg class="rh-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span class="rh-right">08 &middot; Forward Outlook</span>
+  </div>
+  <div class="pad">
+    <div class="eyebrow">Forward Outlook</div>
+    <h2 class="h-sec" style="max-width:28ch">AI search is on a trajectory from a rounding error to a fifth of B2B traffic, and beyond.</h2>
+    <hr class="hr-accent">
+    <p class="lead">These are directional ranges, not precise forecasts, and each carries a stated confidence level. But the direction is not in doubt. AI-sourced traffic is growing more than 40% a month off a small base, buyers are moving from AI-assisted research toward AI-mediated procurement, and citation advantage is concentrating in the brands that moved first.</p>
+
+    <div class="exhibit flush">
+      <div class="ex-head">
+        <div class="ex-kicker">Exhibit 17</div>
+        <div class="ex-title">AI-sourced traffic is climbing from low single digits toward a fifth or more of B2B organic.</div>
+        <div class="ex-sub">AI-driven share of B2B organic traffic, observed and directional</div>
+      </div>
+      <div class="barv">
+        <div class="barv-col"><div class="barv-bar" style="height:10%;background:var(--grad-light)"><span class="v">2 to 6%</span></div></div>
+        <div class="barv-col"><div class="barv-bar" style="height:50%;background:var(--grad-medium)"><span class="v">15 to 25%</span></div></div>
+        <div class="barv-col"><div class="barv-bar" style="height:88%;background:var(--grad-strong)"><span class="v">20 to 50%</span></div></div>
+      </div>
+      <div class="barv-cap">
+        <div class="barv-capcol">Mid-2025<span class="sub">Forrester, observed</span></div>
+        <div class="barv-capcol">Q4 2026<span class="sub">SaaS categories, directional</span></div>
+        <div class="barv-capcol">By 2028<span class="sub">McKinsey at-risk upper bound</span></div>
+      </div>
+      <div class="ex-source"><b>Source:</b> Forrester (2% to 6% mid-2025, 40%+ monthly growth); McKinsey (24-month at-risk range and 2028 horizon). Bars are directional ranges, not point forecasts.</div>
+    </div>
+
+    <div class="stat-grid c4" style="margin-top:30px">
+      <div class="stat-card">
+        <div class="sc-n">$750<span class="u">B</span></div>
+        <div class="sc-l">in US revenue influenced by AI-powered search by 2028</div>
+        <div class="sc-src">McKinsey</div>
+      </div>
+      <div class="stat-card accent">
+        <div class="sc-n">75<span class="u">%+</span></div>
+        <div class="sc-l">of Google searches expected to include AI summaries by 2028</div>
+        <div class="sc-src">McKinsey</div>
+      </div>
+      <div class="stat-card accent">
+        <div class="sc-n">20<span class="u">to</span>30<span class="u">%</span></div>
+        <div class="sc-l">of enterprise SaaS evaluations to include an AI Deep Research report by Q4 2026</div>
+        <div class="sc-src">G2, directional</div>
+      </div>
+      <div class="stat-card">
+        <div class="sc-n">2027</div>
+        <div class="sc-l">agentic procurement tools in early adoption among sophisticated buyers</div>
+        <div class="sc-src">MaximusLabs projection</div>
+      </div>
+    </div>
+
+    <div class="note">
+      <div class="nl">The risk inside the trend</div>
+      <p><strong>Platform consolidation:</strong> ChatGPT's 63% buyer share makes narrow, single-platform optimization a dependency risk, while Perplexity stays underweighted relative to its conversion impact. <strong>Tier divergence:</strong> the gap between Elite and Invisible brands will widen through 2026 as entity authority and citation history compound. <strong>Review-platform criticality:</strong> the 76% citation lift around G2 consolidation signals that review presence is becoming structural citation infrastructure, not an optional tactic.</p>
+    </div>
+
+    <div class="pullquote">
+      <div class="pq-t">The cost of waiting is not a worse ranking next quarter. It is a competitor who became the answer, and compounded that authority while you debated whether AI search was real.</div>
+      <div class="pq-a">Krishna Kaanth M, Founder, MaximusLabs</div>
+    </div>
+  </div>
+  <div class="page-foot">
+    <svg class="pf-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span>&copy; 2026 MaximusLabs &middot; <b>AI Search in B2B SaaS 2026</b></span>
+    <span>30</span>
+  </div>
+</section>
+
+<!-- ============== DIVIDER 09 ============== -->
+<section class="page divider">
+  <svg class="motif" viewBox="0 0 48 48"><use href="#ml-mark-w"/></svg>
+  <div class="dv-num">09</div>
+  <div class="dv-eyebrow">Methodology, Sources &amp; References</div>
+  <h2 class="dv-title">Every number in this report is sourced. Here is exactly where each one came from.</h2>
+  <p class="dv-dek">This section documents the primary data behind the analysis, the limitations you should weigh, our conflicts of interest as a GEO firm, a ledger mapping each headline figure to its source, and the full reference list.</p>
+  <div style="position:absolute;left:74px;right:74px;bottom:32px;display:flex;justify-content:space-between;align-items:center;z-index:2;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#7fa8de;font-weight:700">
+    <span>AI Search in B2B SaaS 2026</span><span>31</span>
+  </div>
+</section>
+
+<!-- ============== SECTION 09.1 ============== -->
+<section class="page">
+  <div class="runhead">
+    <svg class="rh-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span class="rh-right">09 &middot; Methodology &amp; Sources</span>
+  </div>
+  <div class="pad">
+    <div class="eyebrow">Methodology</div>
+    <h2 class="h-sec" style="max-width:28ch">How this report was built, and where to be careful with the numbers.</h2>
+    <hr class="hr-accent">
+    <p class="lead">This report synthesizes primary survey data, large-scale citation studies, platform-level analyses, and anonymized client benchmarks. Where a figure is directional rather than precise, we say so on the exhibit. The sources below are the backbone of the analysis.</p>
+
+    <div class="eyebrow" style="margin-top:30px;margin-bottom:0">Primary Data Sources</div>
+    <ul style="columns:2;column-gap:40px;font-size:12.5px;color:var(--text-2);line-height:1.5;padding-left:18px;margin-top:18px">
+      <li style="break-inside:avoid;padding:5px 0"><strong>G2 Answer Economy Report</strong> (March 2026), 1,076 B2B software buyers</li>
+      <li style="break-inside:avoid;padding:5px 0"><strong>G2 Buyer Behavior Reports</strong> (April and August 2025), 1,000+ buyers each</li>
+      <li style="break-inside:avoid;padding:5px 0"><strong>Goodie AI Citation Study</strong> (Feb to June 2025), 5.7M citation links</li>
+      <li style="break-inside:avoid;padding:5px 0"><strong>Q1 2026 Brand AI Visibility Study</strong>, 177 brands, 107,011 responses</li>
+      <li style="break-inside:avoid;padding:5px 0"><strong>BrightEdge AI Overviews Data</strong> (February 2026), B2B tech triggers</li>
+      <li style="break-inside:avoid;padding:5px 0"><strong>Seer Interactive AI Mode Analysis</strong> (2026), 25.1M impressions</li>
+      <li style="break-inside:avoid;padding:5px 0"><strong>First Page Sage Conversion Study</strong> (2025 to 2026), 160+ companies</li>
+      <li style="break-inside:avoid;padding:5px 0"><strong>Semrush Content Correlation Analysis</strong>, thousands of AI citations</li>
+      <li style="break-inside:avoid;padding:5px 0"><strong>Forrester AI Search B2B Traffic Report</strong> (mid-2025)</li>
+      <li style="break-inside:avoid;padding:5px 0"><strong>McKinsey AI Discovery Survey</strong> (October 2025), n=1,927</li>
+      <li style="break-inside:avoid;padding:5px 0"><strong>MaximusLabs client data</strong>, anonymized AEO results incl. Oliv AI</li>
+    </ul>
+
+    <div class="note" style="margin-top:30px">
+      <div class="nl">Limitations</div>
+      <p><strong>Benchmark variance:</strong> citation tier ranges (8 to 15%, 20 to 30%, 40 to 50%+) are industry directional estimates and should be validated against category-specific query sets. <strong>Model drift:</strong> platform citation behavior changes with model and retrieval updates, so H1 2025 data may not reflect current behavior exactly. <strong>Attribution:</strong> the 2.4% ChatGPT conversion rate comes from an above-average-GEO client set and may overstate baseline performance. <strong>Client data:</strong> the Oliv AI 64% citation rate reflects a specific engagement and query set, and individual outcomes vary.</p>
+    </div>
+
+    <div class="note">
+      <div class="nl">Conflicts of Interest</div>
+      <p>MaximusLabs is a GEO consulting and AEO services firm. This report is produced to advance industry knowledge. All third-party data is cited directly, and any MaximusLabs client data is clearly labeled and presented alongside independent verification benchmarks.</p>
+    </div>
+  </div>
+  <div class="page-foot">
+    <svg class="pf-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span>&copy; 2026 MaximusLabs &middot; <b>AI Search in B2B SaaS 2026</b></span>
+    <span>32</span>
+  </div>
+</section>
+
+<!-- ============== SECTION 09.2 ============== -->
+<section class="page">
+  <div class="runhead">
+    <svg class="rh-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span class="rh-right">09 &middot; Methodology &amp; Sources</span>
+  </div>
+  <div class="pad">
+    <div class="eyebrow">Source Ledger</div>
+    <h2 class="h-sec" style="max-width:28ch">Every headline number in this report, mapped to its source.</h2>
+    <hr class="hr-accent">
+    <p class="lead">One table, the whole evidentiary spine. If a figure appears on a chart in this report, it appears here with its origin.</p>
+
+    <div class="exhibit flush">
+      <div class="ex-head">
+        <div class="ex-kicker">Exhibit 18</div>
+        <div class="ex-title">The citation ledger: claim, value, and source.</div>
+      </div>
+      <table class="tbl ledger">
+        <thead><tr><th>Metric</th><th class="num">Value</th><th>Source</th></tr></thead>
+        <tbody>
+          <tr><td>B2B buyers starting research in an AI assistant</td><td class="num hl">51%</td><td>G2 Answer Economy, Mar 2026</td></tr>
+          <tr><td>Buyers who chose a different vendor on AI guidance</td><td class="num hl">69%</td><td>G2</td></tr>
+          <tr><td>Buyers who bought from a previously unknown vendor</td><td class="num hl">33%</td><td>G2</td></tr>
+          <tr><td>Tracked SaaS brands with zero AI mentions</td><td class="num hl">90%</td><td>Q1 2026 Visibility Study</td></tr>
+          <tr><td>AI responses tested</td><td class="num hl">107,011</td><td>Q1 2026 Visibility Study</td></tr>
+          <tr><td>Citation links analyzed</td><td class="num hl">5.7M</td><td>Goodie, Feb to Jun 2025</td></tr>
+          <tr><td>Share of citations owned by the top 10 domains</td><td class="num hl">35%+</td><td>Goodie</td></tr>
+          <tr><td>Elite citation rate, Oliv AI</td><td class="num hl">64%</td><td>MaximusLabs client data</td></tr>
+          <tr><td>Category incumbent citation baseline</td><td class="num hl">&approx;30%</td><td>MaximusLabs</td></tr>
+          <tr><td>ChatGPT B2B SaaS referral conversion</td><td class="num hl">2.4%</td><td>First Page Sage</td></tr>
+          <tr><td>ChatGPT conversion lift vs non-branded organic</td><td class="num hl">+31%</td><td>Visibility Labs / Flow</td></tr>
+          <tr><td>Perplexity conversion vs standard organic</td><td class="num hl">11x</td><td>AuthorityTech</td></tr>
+          <tr><td>Clarity correlation with citation</td><td class="num hl">+32.83%</td><td>Semrush</td></tr>
+          <tr><td>Promotional tone correlation with citation</td><td class="num hl">&minus;26.19%</td><td>Semrush</td></tr>
+          <tr><td>Citation lift around G2 consolidation</td><td class="num hl">76%</td><td>Birkett, LinkedIn, Feb 2026</td></tr>
+          <tr><td>Paid CTR lift when cited in AI Overviews</td><td class="num hl">&approx;40%</td><td>Seer Interactive</td></tr>
+          <tr><td>AI-driven share of B2B organic traffic, mid-2025</td><td class="num hl">2 to 6%</td><td>Forrester</td></tr>
+          <tr><td>ChatGPT buyer market share</td><td class="num hl">63%</td><td>AuthorityTech / G2</td></tr>
+          <tr><td>US revenue influenced by AI search by 2028</td><td class="num hl">$750B</td><td>McKinsey</td></tr>
+        </tbody>
+      </table>
+      <div class="ex-source"><b>Source:</b> As listed per row. Full citations in the reference list that follows. Directional figures are labeled on their source exhibits.</div>
+    </div>
+  </div>
+  <div class="page-foot">
+    <svg class="pf-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span>&copy; 2026 MaximusLabs &middot; <b>AI Search in B2B SaaS 2026</b></span>
+    <span>33</span>
+  </div>
+</section>
+
+<!-- ============== SECTION 09.3 ============== -->
+<section class="page">
+  <div class="runhead">
+    <svg class="rh-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span class="rh-right">09 &middot; Methodology &amp; Sources</span>
+  </div>
+  <div class="pad">
+    <div class="eyebrow">References</div>
+    <h2 class="h-sec" style="max-width:28ch">Full reference list.</h2>
+    <hr class="hr-accent">
+    <div class="ref-list">
+      <div class="ref"><span class="rn">1</span><div><a href="https://www.demandgenreport.com/industry-news/news-brief/half-of-b2b-software-buyers-now-start-their-research-with-ai-chatbots-g2/52737/">Half of B2B Software Buyers Now Start Their Research with AI Chatbots &middot; DemandGen Report</a></div></div>
+      <div class="ref"><span class="rn">2</span><div><a href="https://www.prnewswire.com/news-releases/new-g2-research-half-of-b2b-software-buyers-now-start-their-research-with-ai-chatbots-302742807.html">New G2 Research: Half of B2B Buyers Start Research with AI Chatbots &middot; PR Newswire</a></div></div>
+      <div class="ref"><span class="rn">3</span><div><a href="https://www.facebook.com/SearchEngineJournal/posts/90-of-brands-have-zero-ai-search-mentions-according-to-new-q1-2026-researchread-/1466089048894874/">90% of Brands Have Zero AI Search Mentions, Q1 2026 Research &middot; Search Engine Journal</a></div></div>
+      <div class="ref"><span class="rn">4</span><div><a href="https://www.icypluto.com/blog/the-shocking-truth-about-ai-search-visibility-why-90-of-brands-are-completely-invisible">The Shocking Truth About AI Search Visibility: Why 90% of Brands Are Invisible &middot; IcyPluto</a></div></div>
+      <div class="ref"><span class="rn">5</span><div><a href="https://www.maximuslabs.ai/answer-engine-optimizations/answer-engine-optimization-case-studies">Answer Engine Optimization Case Studies: 5 Client Results &middot; MaximusLabs</a></div></div>
+      <div class="ref"><span class="rn">6</span><div><a href="https://discoveredlabs.com/blog/geo-metrics-what-kpis-matter-how-to-track-them-2026">GEO Metrics: What KPIs Matter &amp; How to Track Them (2026) &middot; Discovered Labs</a></div></div>
+      <div class="ref"><span class="rn">7</span><div><a href="https://firstpagesage.com/seo-blog/chatgpt-conversion-rates/">ChatGPT Conversion Rates: 2026 Report &middot; First Page Sage</a></div></div>
+      <div class="ref"><span class="rn">8</span><div><a href="https://www.linkedin.com/posts/mattdiggityseo_chatgpt-traffic-is-converting-31-better-activity-7434477072489762816-I-B8">ChatGPT Referral Traffic Converts 31% Better Than Organic Search &middot; LinkedIn</a></div></div>
+      <div class="ref"><span class="rn">9</span><div><a href="https://authoritytech.io/blog/chatgpt-vs-perplexity-vs-google-ai-overviews-b2b-pipeline-2026">Google vs Perplexity vs ChatGPT: Traffic, Citations, Pipeline &middot; AuthorityTech</a></div></div>
+      <div class="ref"><span class="rn">10</span><div><a href="https://www.linkedin.com/posts/goodie-ai_ai-in-saas-the-most-cited-b2b-saas-domains-activity-7374087603744149504-_523">How LLMs Like ChatGPT Cite Sources: A Study on AI Search &middot; Goodie AI</a></div></div>
+      <div class="ref"><span class="rn">11</span><div><a href="https://firstlinesoftware.com/blog/ai-search-b2b/">AI Search and the Shift in B2B Buying Behavior &middot; First Line Software</a></div></div>
+      <div class="ref"><span class="rn">12</span><div><a href="https://nobori.ai/blog/google-ai-mode-zero-click-rate-100m-users-2026">Google AI Mode: 93% Zero-Click Rate at 100M Users &middot; Nobori</a></div></div>
+      <div class="ref"><span class="rn">13</span><div><a href="https://www.facebook.com/Semrush/posts/ai-search-platforms-like-chatgpt-google-ai-mode-and-perplexity-are-changing-how-/1305646441604610/">AI Search Platforms Are Changing How Sources Are Cited &middot; Semrush</a></div></div>
+      <div class="ref"><span class="rn">14</span><div><a href="https://totallytoria.co.uk/2025/11/05/ai-is-now-the-new-front-door-to-the-internet-according-to-mckinsey-study/">AI Is Now the New Front Door to the Internet, McKinsey Study &middot; Totally Toria</a></div></div>
+      <div class="ref"><span class="rn">15</span><div><a href="https://www.contentgrip.com/ai-search-study-mckinsey/">Why AI Search Is Killing SEO and What Marketers Must Do &middot; ContentGrip</a></div></div>
+      <div class="ref"><span class="rn">16</span><div><a href="https://www.linkedin.com/posts/stephenbaruch_httpswwwmckinseycomcapabilitiesgrowth-marketing-and-sales-activity-7394107405514596352-8QBy">How to Win in the Age of AI Search: A McKinsey Report &middot; LinkedIn</a></div></div>
+      <div class="ref"><span class="rn">17</span><div><a href="https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/new-front-door-to-the-internet-winning-in-the-age-of-ai-search">Winning in the Age of AI Search &middot; McKinsey</a></div></div>
+      <div class="ref"><span class="rn">18</span><div><a href="https://www.digitalcommerce360.com/2025/07/11/forrester-ai-search-reshaping-b2b-marketing/">Forrester: AI Search Is Reshaping B2B Marketing &middot; Digital Commerce 360</a></div></div>
+      <div class="ref"><span class="rn">19</span><div><a href="https://www.linkedin.com/posts/sfiesel_forrester-reports-that-ai-powered-search-activity-7375181969606852608-ktQZ">Forrester: AI Search Drives 2-6% of B2B Traffic, Growing 40% Monthly &middot; LinkedIn</a></div></div>
+      <div class="ref"><span class="rn">20</span><div><a href="https://www.forrester.com/blogs/will-zero-click-search-kill-my-b2b-website/">Will Zero-Click Search Kill My B2B Website? &middot; Forrester</a></div></div>
+      <div class="ref"><span class="rn">21</span><div><a href="https://learn.g2.com/ai-search-surging-for-b2b-buyers">How AI Chat Is Rewriting B2B Software Buying &middot; G2 Learning Hub</a></div></div>
+      <div class="ref"><span class="rn">22</span><div><a href="https://www.linkedin.com/pulse/how-ai-reshaping-b2b-saas-buyer-journey-josh-bean-unk6c">How AI Is Reshaping the B2B SaaS Buyer Journey &middot; LinkedIn</a></div></div>
+      <div class="ref"><span class="rn">23</span><div><a href="https://overthinkgroup.com/b2b-saas-seo-report-april-2026/">The State of Niche B2B SaaS Search: April 2026 Report &middot; Overthink Group</a></div></div>
+      <div class="ref"><span class="rn">24</span><div><a href="https://www.linkedin.com/top-content/artificial-intelligence/ai-in-seo/impact-of-google-ai-overviews-on-click-through-rates/">Impact of Google AI Overviews on Click-Through Rates &middot; LinkedIn</a></div></div>
+      <div class="ref"><span class="rn">25</span><div><a href="https://abmagency.com/what-is-zero-click-search-and-how-has-it-impacted-b2b-marketing/">How Much Has Zero-Click Search Impacted B2B Marketing &middot; ABM Agency</a></div></div>
+      <div class="ref"><span class="rn">26</span><div><a href="https://ziptie.dev/blog/how-different-ai-platforms-cite-the-same-source-differently/">How Different AI Platforms Cite the Same Source Differently &middot; ZipTie</a></div></div>
+      <div class="ref"><span class="rn">27</span><div><a href="https://www.synscribe.com/blog/ai-search-engines-comparison">ChatGPT vs Perplexity vs Claude Search Optimization &middot; Synscribe</a></div></div>
+      <div class="ref"><span class="rn">28</span><div><a href="https://www.linkedin.com/posts/athena-hq_while-some-brands-are-waiting-for-clearer-activity-7423051341062684672-ESW0">AI Search Advantage: Capturing 15-25% Share of Voice &middot; Athena HQ</a></div></div>
+      <div class="ref"><span class="rn">29</span><div><a href="https://www.dataslayer.ai/blog/reddit-g2-integration-new-b2b-strategy-you-should-know-about-nov-2025">Reddit B2B Marketing 2025: G2 Integration Guide &middot; Dataslayer</a></div></div>
+      <div class="ref"><span class="rn">30</span><div><a href="https://www.linkedin.com/posts/iamalexbirkett_interesting-research-on-g2-et-als-influence-activity-7432756388252094464-Gfvj">G2 Acquisition Boosts AI Visibility by 76% &middot; Alex Birkett, LinkedIn</a></div></div>
+      <div class="ref"><span class="rn">31</span><div><a href="https://www.stackmatix.com/blog/geo-seo-examples">GEO SEO Examples: How Brands Win in AI Search &middot; Stackmatix</a></div></div>
+      <div class="ref"><span class="rn">32</span><div><a href="https://winkstrategies.com/en/seo-geo-generative-ai-content-strategy/">From Traditional SEO to GEO: How Generative AI Is Redefining Content &middot; Wink Strategies</a></div></div>
+      <div class="ref"><span class="rn">33</span><div><a href="https://discoveredlabs.com/blog/geo-content-strategy-how-to-write-for-ai-search-and-citations">GEO Content Strategy: How to Write for AI Search and Citations &middot; Discovered Labs</a></div></div>
+      <div class="ref"><span class="rn">34</span><div><a href="https://www.flow-agency.com/blog/seo-for-chatgpt/">B2B SEO for ChatGPT: From Visibility to Sales &middot; Flow Agency</a></div></div>
+    </div>
+  </div>
+  <div class="page-foot">
+    <svg class="pf-mark" viewBox="0 0 267 48"><use href="#ml-word"/></svg>
+    <span>&copy; 2026 MaximusLabs &middot; <b>AI Search in B2B SaaS 2026</b></span>
+    <span>34</span>
+  </div>
+</section>
+
+<!-- ============== ABOUT / CLOSING ============== -->
+<section class="page about">
+  <svg class="motif" viewBox="0 0 48 48"><use href="#ml-mark-w"/></svg>
+  <svg class="ab-logo" viewBox="0 0 267 48" style="width:167px"><use href="#ml-word-w"/></svg>
+  <h2>Engineer the answer, not just the ranking.</h2>
+  <p>MaximusLabs is a B2B growth consultancy specializing in Answer Engine Optimization and Generative Engine Optimization for SaaS, healthcare, and financial services companies. We help clients engineer AI search visibility that drives qualified pipeline, measured by citation rate, share of voice, and conversion outcomes, not vanity metrics.</p>
+  <a class="ab-cta" href="https://www.maximuslabs.ai/resources/reports/">Explore our reports at maximuslabs.ai &rarr;</a>
+  <div class="ab-meta">
+    <div>
+      <div class="am-k">Proven Results</div>
+      <div class="am-v">102+ incremental leads<br>$174K+ attributed revenue<br>Up to 6x conversion lift</div>
+    </div>
+    <div>
+      <div class="am-k">Practice</div>
+      <div class="am-v">Answer Engine Optimization (AEO)<br>Generative Engine Optimization (GEO)</div>
+    </div>
+    <div>
+      <div class="am-k">Sectors</div>
+      <div class="am-v">B2B SaaS<br>Healthcare<br>Financial services</div>
+    </div>
+    <div>
+      <div class="am-k">This Report</div>
+      <div class="am-v">AI Search in B2B SaaS 2026<br>The Vertical Benchmark</div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
